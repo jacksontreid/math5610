@@ -1,4 +1,4 @@
-# Math 5610 Fundamentals of Computational Mathematics Software Manual
+# MATH 5610 Software Manual
 
 ### Subroutine: [_dmaceps_](../dmaceps.f90)
 

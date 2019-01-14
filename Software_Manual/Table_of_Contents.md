@@ -1,4 +1,4 @@
-# Math 5610 Fundamentals of Computational Mathematics Software Manual
+# MATH 5610 Software Manual
 
 ## Table of Contents
 
