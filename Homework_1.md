@@ -1,4 +1,4 @@
-# Math 5610 Fundamentals of Computational Mathematics Software Manual
+# Math 5610 Fundamentals of Computational Mathematics
 
 ## Homework #1
 
@@ -14,6 +14,8 @@
 - [ ] [Task #10](#task-#10)
 
 ### Task #1
+
+The
 
 ### Task #2
 
