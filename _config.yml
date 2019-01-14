@@ -1,4 +1,4 @@
 theme: jekyll-theme-midnight
 title: MATH 5610
 description: Fundamentals of Computational Mathematics
-permalink: /math5610
+baseurl: /math5610
