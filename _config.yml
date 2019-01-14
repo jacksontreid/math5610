@@ -1,3 +1,4 @@
 theme: jekyll-theme-midnight
 title: MATH 5610
 description: Fundamentals of Computational Mathematics
+breadcrumbs: true
