@@ -1,6 +1,6 @@
 # Math 5610 Fundamentals of Computational Mathematics Software Manual
 
-### Subroutine: [_smaceps_](./smaceps.f90)
+### Subroutine: [_smaceps_](../smaceps.f90)
 
 **Author:** Jackson Reid
 
