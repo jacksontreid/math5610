@@ -8,7 +8,7 @@
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
-- [ ] [Task 7](#task-7)
+- [x] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
@@ -128,7 +128,7 @@ Now, let's do a bit more with this example. We will need to add some code to the
 ```
 First, there are some things that need to be described in the code:
 
-1. The line on the left indicates how the code needs to be written in the column. In fortran, the comment line must start as the first character of the line typed in. So, the pipe, "|", is like the edge of the window and is not actually a character on your screen, just the border of the document.
+1. The line on the left indicates how the code needs to be written in the column. In fortran, the comment line must start as the first character of the line typed in. So, the pipe, "&#124", is like the edge of the window and is not actually a character on your screen, just the border of the document.
 
 2. The string "C$OMP" tells the compiler that the line is a line associated with OpenMP. The first letter must appear in the first column and indicates that when compiled without OpenMP extensions, will be ignored. If the OpenMP library is available, the compiler will include the parameters contained in the comments. These strings are the start of a "directive" to the compiler to do something.
 
@@ -141,11 +141,22 @@ First, there are some things that need to be described in the code:
     ``` % ./hello.exe```
 
    Report the results of running the code.
-- Code: 
+   
+- Code: [hello.f90](hello.f90)
 
 - Code results:
 
-  
+  ```
+   Hello World! From thread            6
+   Hello World! From thread            3
+   Hello World! From thread            4
+   Hello World! From thread            5
+   Hello World! From thread            1
+   Hello World! From thread            7
+   Hello World! From thread            0
+   Hello World! From thread            2
+   There are            8  threads!
+  ```
 
 ### Task 8
 
