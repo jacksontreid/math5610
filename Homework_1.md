@@ -9,7 +9,7 @@
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
-- [ ] [Task 8](#task-8)
+- [x] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
@@ -128,7 +128,7 @@ Now, let's do a bit more with this example. We will need to add some code to the
 ```
 First, there are some things that need to be described in the code:
 
-1. The line on the left indicates how the code needs to be written in the column. In fortran, the comment line must start as the first character of the line typed in. So, the pipe, "&#124", is like the edge of the window and is not actually a character on your screen, just the border of the document.
+1. The line on the left indicates how the code needs to be written in the column. In fortran, the comment line must start as the first character of the line typed in. So, the vertical lines are like the edge of the window and is not actually a character on your screen, just the border of the document.
 
 2. The string "C$OMP" tells the compiler that the line is a line associated with OpenMP. The first letter must appear in the first column and indicates that when compiled without OpenMP extensions, will be ignored. If the OpenMP library is available, the compiler will include the parameters contained in the comments. These strings are the start of a "directive" to the compiler to do something.
 
@@ -162,13 +162,13 @@ First, there are some things that need to be described in the code:
 
 Read the three disaster articles at the site
 
-​           http://www-users.math.umn.edu/~arnold//disasters/
+​           http://www-users.math.umn.edu/~arnold/disasters/disasters.html
 
-Write a brief paragraph on each of the disasters describing the particular problem as described.
+Write a brief paragraph on each of the disasters, describing the particular problem as described.
 
-- Disaster 1:
-- Disaster 2:
-- Disaster 3:
+- **Disaster 1:** An interceptor missile used a targeting computer with a 24 bit register. Because of the finite precision of the computer, round-off error was introduced when converting integer time measurements to decimal values. For small time measurements, the error remained in an acceptable range. However, as the elapsed time increased, the error in the time measurement grew to about 0.34 seconds. This time error caused a large difference between the interceptor's calculated target and the true physical location of the target, causing the interceptor to completely miss the target.
+- **Disaster 2:** The inertia reference system software aboard an unmanned rocket attempted to convert a large 64 bit floating point number to a 16 bit signed integer. Because the 64 bit number, relating to the horizontal velocity of the craft, was larger than the largest integer able to be stored as a 16 bit integer, the conversion failed, resulting in the complete loss of the rocket's inertial guidance.
+- **Disaster 3:** The structural stresses in the concrete structure of an oil platform were under-predicted by the finite element simulations used in the design process. The structure was designed to perform at a depth of 82m below sea level. However, the finite element software approximated the shear stresses to be 47% of the true values, resulting in the cracking and failure of the structure at a depth of 65m.
 
 ### Task 9
 
