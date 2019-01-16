@@ -34,6 +34,7 @@ Note that your username will be set when you create your Github account. It is i
 ### Task 3
 
 Create a repository for Github Pages. You can do this by using the documentation at the following link:
+
  ```          https://pages.github.com/ ```
 
 The information on the web page given above will show you how to build web pages from Jeykll css files. This repository allows access to projects as you create them in your repository. I will use the link created in this repository to grade your Software Manual.
@@ -60,22 +61,36 @@ Create a table of contents for the homework tasks using markdown. We will go thr
 To complete this problem, you will need to go to the Engineering Computer Lab on the third floor of the Engineering Building. Login to one of the computers and open up a Cygwin window. A Linux shell window will pop up for you to use. Complete the following steps:
 
 1. Log onto a computer (Engineering Lab) and open a command terminal to work in.
+
 2. Upload/copy the routines that you created in the first problem.
+
 3. Compile the routines into object modules (.o files). For example, put the files you have uploaded into a folder, say hw1_prob3, using the command
-               ```% mkdir hw1_prob3```
+
+   ​     ```% mkdir hw1_prob3```
+
    and in a Cygwin/Linux/Unix operating system. Note that the "%" is the command prompt that may appear in the command terminal. Then use
-              ``` % mv *.f hw1_prob3```
-               ```% cd hw1_prob3```
+
+   ​     ``` % mv *.f hw1_prob3```
+   ​     ```% cd hw1_prob3```
+
    to move all files ending with a .f suffix to the folder just created and change the working folder to the folder just created. Finally, compile the files using
-               ```% gfortran -c *.f```
+
+   ​      ```% gfortran -c *.f```
+
    or
-               ```% gcc -c *.c```
+
+   ​      ```% gcc -c *.c```
+
    using the C-compiler in Cygwin. The result will be a bunch of object files with a suffix of ".o".
+
 4. The last step in this problem is to create a shared library from the routines you have created.
-              ``` % ar rcv mylib *.o```
+
+   ​      ``` % ar rcv mylib *.o``` 
+
    or
-               ```% ar rcv mylib *.o```
-               ```% ranlib mylib.a```
+
+   ​      ```% ar rcv mylib *.o```
+   ​      ```% ranlib mylib.a```
 
 - Shared Library: [math5610lib](https://github.com/jacksontreid/math5610)
 
@@ -114,19 +129,45 @@ Now, let's do a bit more with this example. We will need to add some code to the
 First, there are some things that need to be described in the code:
 
 1. The line on the left indicates how the code needs to be written in the column. In fortran, the comment line must start as the first character of the line typed in. So, the pipe, "|", is like the edge of the window and is not actually a character on your screen, just the border of the document.
+
 2. The string "C$OMP" tells the compiler that the line is a line associated with OpenMP. The first letter must appear in the first column and indicates that when compiled without OpenMP extensions, will be ignored. If the OpenMP library is available, the compiler will include the parameters contained in the comments. These strings are the start of a "directive" to the compiler to do something.
+
 3. For the present time, (1) save the code above into a file named "hello.f", (2) compile the code above, using
-    ``` % gfortran -fopenmp hello.f -o hello```
+
+   ``` % gfortran -fopenmp hello.f -o hello```
+
    and then run the compiled version of the code using the command
+
     ``` % ./hello.exe```
+
    Report the results of running the code.
+- Code: 
+
 - Code results:
 
   
 
-
 ### Task 8
+
+Read the three disaster articles at the site
+
+​           http://www-users.math.umn.edu/~arnold//disasters/
+
+Write a brief paragraph on each of the disasters describing the particular problem as described.
+
+- Disaster 1:
+- Disaster 2:
+- Disaster 3:
 
 ### Task 9
 
+Write a routine that will generate a random matrix of a given size. That is, input the number of rows and columns and output the matrix created by setting each entry in the matrix to a random value between zero and one.
+
+- Code:
+- Software Manual Entry.
+
 ### Task 10
+
+Search the internet for sites that discuss linear algebra packages for solving linear algebra problems. Find a couple of sites that most closely line up with what you think we will be doing in the class. Reference the sites in a brief discussion.
+
+- Site:
