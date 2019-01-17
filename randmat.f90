@@ -1,4 +1,4 @@
-!Generates a matrix of size (r,c) populated with random values, 0 <= a < 1.
+!Generates a matrix of size (r,c) populated with random values, [0,1).
 !@author Jackson Reid
 
 SUBROUTINE randmat(r,c,mat)

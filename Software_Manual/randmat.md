@@ -38,8 +38,8 @@ Or, a library can be created from this routine
       c = 3
       CALL randmat(r,c,mat)
       DO i = 1,4
-      	WRITE(*,*) mat(i,:)
-	  END DO
+         WRITE(*,*) mat(i,:)
+      END DO
 ```
 Output from the lines above:
 ```
