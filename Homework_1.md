@@ -11,7 +11,7 @@
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
 - [x] [Task 9](#task-9)
-- [ ] [Task 10](#task-10)
+- [x] [Task 10](#task-10)
 
 ### Task 1
 
@@ -179,6 +179,9 @@ Write a routine that will generate a random matrix of a given size. That is, inp
 
 ### Task 10
 
-Search the internet for sites that discuss linear algebra packages for solving linear algebra problems. Find a couple of sites that most closely line up with what you think we will be doing in the class. Reference the sites in a brief discussion.
+Search the Internet for sites that discuss linear algebra packages for solving linear algebra problems. Find a couple of sites that most closely line up with what you think we will be doing in the class. Reference the sites in a brief discussion.
 
-- Site:
+- Site: [LAPACK](http://www.netlib.org/lapack/)
+  - LAPACK is a linear algebra package (hence the name) written in FORTRAN, and includes routines for solving various kinds of linear systems of equations and eigenvalue problems. 
+- Site: [SciPy](https://docs.scipy.org/doc/scipy/reference/index.html)
+  - SciPy is an open-source software designed for math, science, and engineering applications, and is accessed through a Python interface. It's [linalg](https://docs.scipy.org/doc/scipy/reference/linalg.html#module-scipy.linalg) module includes many linear algebra functions for solving linear systems, eigenvalue problems, and matrix decomposition. It's [optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html#module-scipy.optimize) module contains functions that solve non-linear systems of equations and perform various forms of optimization. 
