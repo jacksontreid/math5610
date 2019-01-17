@@ -1,34 +1,42 @@
 # MATH 5610 Software Manual
 
-### Subroutine: [_smaceps_](./smaceps.f90)
+### Subroutine: [_smaceps_](../smaceps.f90)
 
 **Author:** Jackson Reid
 
 **Language:** Fortran. The code can be compiled using the GNU Fortran compiler (gfortran).
 
-A library can be created from this routine with the following commands
+This routine can be linked to a program with the commands
+```
+    $ gfortran -c smaceps.f90
+    $ gfortran myprogram.f90 smaceps.o
+```
+
+Or, a library can be created from this routine
 
 ```
-    $ gfortran -c maceps.f90
-    $ ar rcv mylib maceps.o
+    $ gfortran -c smaceps.f90
+    $ ar rcv mylib smaceps.o
 ```
 
-**Description:** This routine will compute the single precision value for the machine epsilon or the number of digits in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This usually will need to be run one time for each computer.
+**Description:** This routine will compute the single-precision machine rounding unit of a computer, and the number of digits used in the representation of real numbers in single precision.
 
 **Inputs:** None.
 
-**Outputs:** This routine returns a single precision value for the number of decimal digits that can be represented on the computer being queried.
+**Outputs:** 
 
-**Usage:** The routine has two arguments needed to return the values of the precision in terms of the smallest number that can be represented. Since the code is written in terms of a Fortran subroutine, the values of the machine machine epsilon and the power of two that gives the machine epsilon. Due to implicit Fortran typing, the first argument is a single precision value and the second is an integer.
+​	_seps_ : real -- the single-precision machine rounding unit
+
+​	_i_ : int -- the number of digits in the representation of real numbers in single precision
+
+**Example Usage:** 
 
 ```
-      call smaceps(sval, ipow)
-      print *, ipow, sval
+      CALL smaceps(seps,i)
+      WRITE(*,*) i, seps
 ```
 Output from the lines above:
 ```
       24   5.96046448E-08
 ```
-The first value (24) is the number of binary digits that define the machine epsilon and the second is related to the decimal version of the same value. The number of decimal digits that can be represented is roughly eight (E-08 on the end of the second value).
-
 **Last Modified:** January/2018

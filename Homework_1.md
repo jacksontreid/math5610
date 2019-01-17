@@ -10,7 +10,7 @@
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
-- [ ] [Task 9](#task-9)
+- [x] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
 ### Task 1
@@ -174,8 +174,8 @@ Write a brief paragraph on each of the disasters, describing the particular prob
 
 Write a routine that will generate a random matrix of a given size. That is, input the number of rows and columns and output the matrix created by setting each entry in the matrix to a random value between zero and one.
 
-- Code:
-- Software Manual Entry.
+- Code: [randmat](randmat.f90)
+- Software Manual [Entry](Software_Manual/randmat.md).
 
 ### Task 10
 
