@@ -5,6 +5,7 @@
 ### Subroutines
 
 - [dmaceps](dmaceps.md)
+- [randmat](randmat.md)
 - [smaceps](smaceps.md) 
 
 **Last Modified:** January/2018
