@@ -15,7 +15,7 @@
 
 ### Task 1
 Email the link to your repository and table of contents for your completed homework tasks. I understand that this is a very easy task. Make sure that the link is an absolute link. The link should be to the username.github.io repository for the css formatted version.
-- 
+- Email sent with the link: [jacksontreid.github.io](https://jacksontreid.github.io/)
 
 ### Task 2
 Implement a method/routine that computes and returns the absolute error in the approximation of a number _x_ by another number _y_. Also create an entry for the method in your software manual.
