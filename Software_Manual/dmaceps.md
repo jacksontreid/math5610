@@ -25,9 +25,9 @@ Or, a library can be created from this routine
 
 **Outputs:** 
 
-​	_seps_ : double -- the double-precision machine rounding unit
+​	_seps_ : REAL*8 -- the double-precision machine rounding unit
 
-​	_i_ : int -- the number of digits in the representation of real numbers in double precision
+​	_i_ : INTEGER -- the number of digits in the representation of real numbers in double precision
 
 **Example Usage:** 
 
