@@ -2,7 +2,7 @@ PROGRAM test
 IMPLICIT NONE
 
 REAL :: seps
-REAL*8 :: deps, mat(4,3)
+REAL*8 :: deps, mat(4,3), a_error, num1, num2
 INTEGER :: i
 
 
@@ -23,5 +23,16 @@ WRITE(*,*) ">>>TEST: RANDOM MATRIX"
     DO i = 1,4
         WRITE(*,*) mat(i,:)
     END DO
+
+!Test error calculators
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: ERROR CALCS"
+    num1 = 25.0001
+    num2 = 25.0
+    CALL abserr(num1,num2,a_error)
+    WRITE(*,*) a_error
+
+    CALL relerr(num1,num2,a_error)
+    WRITE(*,*) a_error
 
 END PROGRAM

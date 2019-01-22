@@ -4,9 +4,11 @@
 
 ### Subroutines
 
+- [abserr](abserr.md)
 - [dmaceps](dmaceps.md)
 - [randmat](randmat.md)
-- [smaceps](smaceps.md) 
+- [relerr](relerr.md)
+- [smaceps](smaceps.md)
 
 **Last Modified:** January/2018
 
