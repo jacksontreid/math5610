@@ -17,9 +17,12 @@
 
 Write a code that will return machine precision for your computer (or any other computer for that matter) in single precision arithmetic. Give the method a name that is descriptive. For example, smaceps(), or something like that. The routine should return the default machine precision in terms of a decimal number. Create a second routine that will return the machine precision in double precision computations. Give the routine a unique name, say dmaceps(). Make sure that your code is fully internally documented with you as the author and so on. An example of a Fortran code is included in this repository. You can translate this into a Python, C, or C++ code to do the work. You can also modify the Fortran and use the given code directly.
 
-- Machine precision in [single precision](smaceps.f90).
-
-- Machine precision in [double precision](dmaceps.f90). 
+- Code:
+  - Machine precision in [single precision](smaceps.f90).
+  - Machine precision in [double precision](dmaceps.f90). 
+- Software Manual entries:
+  - [single precision](Software_Manual/smaceps.md)
+  - [double precision](Software_Manual/dmaceps.md)
 
 ### Task 2
 
@@ -175,7 +178,7 @@ Write a brief paragraph on each of the disasters, describing the particular prob
 Write a routine that will generate a random matrix of a given size. That is, input the number of rows and columns and output the matrix created by setting each entry in the matrix to a random value between zero and one.
 
 - Code: [randmat](randmat.f90)
-- Software Manual [Entry](Software_Manual/randmat.md).
+- Software Manual [entry](Software_Manual/randmat.md).
 
 ### Task 10
 
