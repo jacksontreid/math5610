@@ -2,7 +2,7 @@ PROGRAM test
 IMPLICIT NONE
 
 REAL :: seps
-REAL*8 :: deps, mat(4,3), a_error, num1, num2
+REAL*8 :: deps, mat(4,3), a_error, num1, num2, vec1(4), vec2(4), vec3(4)
 INTEGER :: i
 
 
@@ -34,5 +34,16 @@ WRITE(*,*) ">>>TEST: ERROR CALCS"
 
     CALL relerr(num1,num2,a_error)
     WRITE(*,*) a_error
+
+!Test vector creation, addition, and scaling
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: VECTOR ADDITION AND SCALING"
+    CALL randvec(4,vec1)
+    WRITE(*,*) vec1
+    CALL randvec(4,vec2)
+    WRITE(*,*) vec2
+
+    CALL addvec(vec1,vec2,4,vec3)
+    WRITE(*,*) vec3
 
 END PROGRAM
