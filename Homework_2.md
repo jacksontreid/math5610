@@ -5,7 +5,7 @@
 - [x] [Task 1](#task-1)
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
-- [ ] [Task 4](#task-4)
+- [x] [Task 4](#task-4)
 - [ ] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
@@ -20,16 +20,17 @@ Email the link to your repository and table of contents for your completed homew
 ### Task 2
 Implement a method/routine that computes and returns the absolute error in the approximation of a number _x_ by another number _y_. Also create an entry for the method in your software manual.
 - Code: [abserr.f90](abserr.f90)
-- Software Manual [page](Software_Manual/abserr.md).
+- Software Manual [entry](Software_Manual/abserr.md).
 
 ### Task 3
 Implement a method/routine that computes and returns the relative error in the approximation of a number _x_ by another number _y_. Also create an entry for the method in your software manual.
 - Code: [relerr.f90](relerr.f90)
-- Software Manual [page](Software_Manual/relerr.md).
+- Software Manual [entry](Software_Manual/relerr.md).
 
 ### Task 4
 Implement a method that will add two vectors of the same length. Also create an entry for the method in your software manual.
-- 
+- Code: [addvec.f90](addvec.f90)
+- Software Manual [entry](Software_Manual/accvec.md).
 
 ### Task 5
 Implement a method that will return a scalar multiple of a given vector. The method should require a vector and number for the operation. Add an entry to your software manual for this method.

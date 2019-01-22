@@ -34,8 +34,14 @@ Or, a library can be created from this routine
 **Example Usage:** 
 
 ```
+      approx = 25.0001
+      exact = 25.0
       CALL abserr(approx, exact, error)
       WRITE(*,*) error
+```
+Output from the lines above:
+```
+      9.9182128906250000E-005
 ```
 
 **Last Modified:** January/2018

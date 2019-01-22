@@ -34,8 +34,14 @@ Or, a library can be created from this routine
 **Example Usage:** 
 
 ```
+      approx = 25.0001
+      exact = 25.0
       CALL relerr(approx, exact, error)
       WRITE(*,*) error
+```
+Output from the lines above:
+```
+      3.9672851562500001E-006
 ```
 
 **Last Modified:** January/2018
