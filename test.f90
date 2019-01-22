@@ -5,6 +5,8 @@ REAL :: seps
 REAL*8 :: deps, mat(4,3)
 INTEGER :: i
 
+!Seed random number generator
+CALL randseed()
 
 !Test machine precision
 WRITE(*,*)
