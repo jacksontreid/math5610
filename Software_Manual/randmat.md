@@ -23,13 +23,13 @@ Or, a library can be created from this routine
 
 **Inputs:** 
 
-​	_r_ : int -- the number of desired rows in the array
+​	_r_ : INTEGER -- the number of desired rows in the array
 
-​	_c_ : int -- the number of desired columns in the array
+​	_c_ : INTEGER -- the number of desired columns in the array
 
 **Outputs:** 
 
-​	_mat_ : double -- the array, of size (r,c), containing random values
+​	_mat_ : REAL*8 -- the array, of size (r,c), containing random values
 
 **Example Usage:** 
 
