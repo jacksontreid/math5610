@@ -18,11 +18,11 @@ Email the link to your repository and table of contents for your completed homew
 - 
 
 ### Task 2
-Implement a method/routine that computes and returns the absolute error in the approximation of a number xx by another number yy. Also create an entry for the method in your software manual.
+Implement a method/routine that computes and returns the absolute error in the approximation of a number _x_ by another number _y_. Also create an entry for the method in your software manual.
 - 
 
 ### Task 3
-Implement a method/routine that computes and returns the relative error in the approximation of a number xx by another number yy. Also create an entry for the method in your software manual.
+Implement a method/routine that computes and returns the relative error in the approximation of a number _x_ by another number _y_. Also create an entry for the method in your software manual.
 - 
 
 ### Task 4
@@ -42,7 +42,7 @@ Implement a method that will compute the 1-norm of an arbitrary vector will real
 - 
 
 ### Task 8
-Implement a method that will compute the ∞∞-norm of an arbitrary vector will real number entries. Add an entry to your for the method you create
+Implement a method that will compute the ∞-norm of an arbitrary vector will real number entries. Add an entry to your for the method you create
 - 
 
 ### Task 9
