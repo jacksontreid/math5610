@@ -8,6 +8,7 @@
 - [addvec](addvec.md)
 - [dmaceps](dmaceps.md)
 - [randmat](randmat.md)
+- [randseed](randseed.md)
 - [randvec](randvec.md)
 - [relerr](relerr.md)
 - [smaceps](smaceps.md)

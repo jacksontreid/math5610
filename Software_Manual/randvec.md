@@ -19,7 +19,7 @@ Or, a library can be created from this routine
     $ ar rcv mylib randvec.o
 ```
 
-**Description:** This routine will generate a one-dimensional array (vector) with the number of rows specified. The array is populated with random numbers in the range [0,1).
+**Description:** This routine will generate a one-dimensional array (vector) with the number of rows specified. The array is populated with random numbers in the range [0,1). (Random number generator can be seeded by calling the [_randseed_](randseed.md) routine.)
 
 **Inputs:** 
 
