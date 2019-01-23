@@ -4,20 +4,7 @@
 
 **Author:** Jackson Reid
 
-**Language:** Fortran. The code can be compiled using the GNU Fortran compiler (gfortran).
-
-This routine can be linked to a program with the commands
-```
-    $ gfortran -c randvec.f90
-    $ gfortran myprogram.f90 randvec.o
-```
-
-Or, a library can be created from this routine
-
-```
-    $ gfortran -c randvec.f90
-    $ ar rcv mylib randvec.o
-```
+**Language:** Fortran. The code can be [compiled](compilation.md) using the GNU Fortran compiler (gfortran).
 
 **Description:** This routine will generate a one-dimensional array (vector) with the number of rows specified. The array is populated with random numbers in the range [0,1). (Random number generator can be seeded by calling the [_randseed_](randseed.md) routine.)
 
@@ -33,7 +20,7 @@ Or, a library can be created from this routine
 
 ```
       r = 4
-      CALL randmat(r,vec)
+      CALL randvec(r,vec)
       WRITE(*,*) vec
 ```
 Output from the lines above:

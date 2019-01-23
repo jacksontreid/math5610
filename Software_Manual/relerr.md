@@ -4,20 +4,7 @@
 
 **Author:** Jackson Reid
 
-**Language:** Fortran. The code can be compiled using the GNU Fortran compiler (gfortran).
-
-This routine can be linked to a program with the commands
-```
-    $ gfortran -c relerr.f90
-    $ gfortran myprogram.f90 relerr.o
-```
-
-Or, a library can be created from this routine
-
-```
-    $ gfortran -c relerr.f90
-    $ ar rcv mylib relerr.o
-```
+**Language:** Fortran. The code can be [compiled](compilation.md) using the GNU Fortran compiler (gfortran).
 
 **Description:** This routine will compute the relative error between two numbers.
 
@@ -41,7 +28,7 @@ Or, a library can be created from this routine
 ```
 Output from the lines above:
 ```
-      3.9672851562500001E-006
+3.9672851562500001E-006
 ```
 
 **Last Modified:** January/2018
