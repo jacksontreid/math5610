@@ -6,7 +6,7 @@
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
 - [x] [Task 4](#task-4)
-- [ ] [Task 5](#task-5)
+- [x] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
@@ -30,11 +30,12 @@ Implement a method/routine that computes and returns the relative error in the a
 ### Task 4
 Implement a method that will add two vectors of the same length. Also create an entry for the method in your software manual.
 - Code: [addvec.f90](addvec.f90)
-- Software Manual [entry](Software_Manual/accvec.md).
+- Software Manual [entry](Software_Manual/addvec.md).
 
 ### Task 5
 Implement a method that will return a scalar multiple of a given vector. The method should require a vector and number for the operation. Add an entry to your software manual for this method.
-- 
+- Code: [scalevec.f90](scalevec.f90)
+- Software Manual [entry](Software_Manual/scalevec.md).
 
 ### Task 6
 Implement a method that will compute the 2-norm of an arbitrary vector will real number entries. Add an entry to your for the method you create

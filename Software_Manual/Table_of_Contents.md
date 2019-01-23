@@ -11,6 +11,7 @@
 - [randseed](randseed.md)
 - [randvec](randvec.md)
 - [relerr](relerr.md)
+- [scalevec](scalevec.md)
 - [smaceps](smaceps.md)
 
 ### Software Use
