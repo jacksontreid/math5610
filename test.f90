@@ -21,10 +21,15 @@ WRITE(*,*) ">>>TEST: MACHINE PRECISION"
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: RANDOM MATRIX"
     CALL randmat(4,3,mat)
-
     DO i = 1,4
         WRITE(*,*) mat(i,:)
     END DO
+
+!Test random vector generator
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: RANDOM VECTOR"
+    CALL randvec(4,vec1)
+    WRITE(*,*) vec1
 
 !Test error calculators
 WRITE(*,*)
@@ -40,12 +45,15 @@ WRITE(*,*) ">>>TEST: ERROR CALCS"
 !Test vector creation, addition, and scaling
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: VECTOR ADDITION AND SCALING"
-    CALL randvec(4,vec1)
+    vec1 = (/ 0.5, 0.6, 1.9, 2.0 /)
+    vec2 = (/ 0.2, 0.4, 0.1, 1.0 /)
     WRITE(*,*) vec1
-    CALL randvec(4,vec2)
     WRITE(*,*) vec2
 
     CALL addvec(vec1,vec2,4,vec3)
     WRITE(*,*) vec3
+
+    CALL scalevec(vec1, 4, DBLE(2.))
+    WRITE(*,*) vec1
 
 END PROGRAM

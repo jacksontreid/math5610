@@ -25,7 +25,7 @@
 ```
       vec1 = (/ 0.5, 0.6, 1.9, 2.0 /)
       vec2 = (/ 0.2, 0.4, 0.1, 1.0 /)
-      CALL addvec(vec1, vec2, length, new_vec)
+      CALL addvec(vec1, vec2, 4, new_vec)
       WRITE(*,*) new_vec
 ```
 Output from the lines above:
