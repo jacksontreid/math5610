@@ -7,6 +7,7 @@
 - [abserr](abserr.md)
 - [addvec](addvec.md)
 - [dmaceps](dmaceps.md)
+- [norm2vec](norm2vec.md)
 - [randmat](randmat.md)
 - [randseed](randseed.md)
 - [randvec](randvec.md)
