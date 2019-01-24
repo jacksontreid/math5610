@@ -9,7 +9,7 @@
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
-- [ ] [Task 8](#task-8)
+- [x] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
@@ -49,7 +49,8 @@ Implement a method that will compute the 1-norm of an arbitrary vector will real
 
 ### Task 8
 Implement a method that will compute the ∞-norm of an arbitrary vector will real number entries. Add an entry to your for the method you create
-- 
+- Code: [norminfvec.f90](norminfvec.f90)
+- Software Manual [entry](Software_Manual/norminfvec.md).
 
 ### Task 9
 Write a routine that will generate a symmetric matrix that has real values in all entries of the matrix. Add an entry to your for the method you create
