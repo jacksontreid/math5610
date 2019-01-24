@@ -69,4 +69,7 @@ WRITE(*,*) ">>>TEST: VECTOR NORMS"
     CALL norm1vec(vec1,4,num1)
     WRITE(*,*) num1
 
+    CALL norminfvec(vec1,4,num1)
+    WRITE(*,*) num1
+
 END PROGRAM

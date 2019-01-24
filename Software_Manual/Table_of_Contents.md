@@ -9,6 +9,7 @@
 - [dmaceps](dmaceps.md)
 - [norm1vec](norm1vec.md)
 - [norm2vec](norm2vec.md)
+- [norminfvec](norminfvec.md)
 - [randmat](randmat.md)
 - [randseed](randseed.md)
 - [randvec](randvec.md)
