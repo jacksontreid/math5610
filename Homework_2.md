@@ -8,7 +8,7 @@
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
-- [ ] [Task 7](#task-7)
+- [x] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
@@ -44,7 +44,8 @@ Implement a method that will compute the 2-norm of an arbitrary vector will real
 
 ### Task 7
 Implement a method that will compute the 1-norm of an arbitrary vector will real number entries. Add an entry to your for the method you create
-- 
+- Code: [norm1vec.f90](norm1vec.f90)
+- Software Manual [entry](Software_Manual/norm1vec.md).
 
 ### Task 8
 Implement a method that will compute the ∞-norm of an arbitrary vector will real number entries. Add an entry to your for the method you create
