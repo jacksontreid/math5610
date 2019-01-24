@@ -61,8 +61,12 @@ WRITE(*,*) ">>>TEST: VECTOR ADDITION AND SCALING"
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: VECTOR NORMS"
     vec1 = (/ 0.5, 0.6, 1.9, 2.0 /)
-    CALL norm2vec(vec1,4,num1)
     WRITE(*,*) vec1
+
+    CALL norm2vec(vec1,4,num1)
+    WRITE(*,*) num1
+
+    CALL norm1vec(vec1,4,num1)
     WRITE(*,*) num1
 
 END PROGRAM
