@@ -7,7 +7,7 @@
 - [x] [Task 3](#task-3)
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
-- [ ] [Task 6](#task-6)
+- [x] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
@@ -39,7 +39,8 @@ Implement a method that will return a scalar multiple of a given vector. The met
 
 ### Task 6
 Implement a method that will compute the 2-norm of an arbitrary vector will real number entries. Add an entry to your for the method you create
-- 
+- Code: [norm2vec.f90](norm2vec.f90)
+- Software Manual [entry](Software_Manual/norm2vec.md).
 
 ### Task 7
 Implement a method that will compute the 1-norm of an arbitrary vector will real number entries. Add an entry to your for the method you create

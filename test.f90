@@ -1,8 +1,9 @@
 PROGRAM test
 IMPLICIT NONE
 
-REAL :: seps
-REAL*8 :: deps, mat(4,3), a_error, num1, num2, vec1(4), vec2(4), vec3(4)
+REAL :: snum
+REAL*8 :: num1, num2, num3
+REAL*8 :: mat(4,3), vec1(4), vec2(4), vec3(4)
 INTEGER :: i
 
 !Seed random number generator
@@ -11,11 +12,11 @@ CALL randseed()
 !Test machine precision
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: MACHINE PRECISION"
-    CALL smaceps(seps,i)
-    WRITE(*,*) i, seps
+    CALL smaceps(snum,i)
+    WRITE(*,*) i, snum
 
-    CALL dmaceps(deps,i)
-    WRITE(*,*) i, deps
+    CALL dmaceps(num1,i)
+    WRITE(*,*) i, num1
 
 !Test random matrix generator
 WRITE(*,*)
@@ -36,11 +37,11 @@ WRITE(*,*)
 WRITE(*,*) ">>>TEST: ERROR CALCS"
     num1 = 25.0001
     num2 = 25.0
-    CALL abserr(num1,num2,a_error)
-    WRITE(*,*) a_error
+    CALL abserr(num1,num2,num3)
+    WRITE(*,*) num3
 
-    CALL relerr(num1,num2,a_error)
-    WRITE(*,*) a_error
+    CALL relerr(num1,num2,num3)
+    WRITE(*,*) num3
 
 !Test vector creation, addition, and scaling
 WRITE(*,*)
@@ -55,5 +56,13 @@ WRITE(*,*) ">>>TEST: VECTOR ADDITION AND SCALING"
 
     CALL scalevec(vec1, 4, DBLE(2.))
     WRITE(*,*) vec1
+
+!Test vector norms
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: VECTOR NORMS"
+    vec1 = (/ 0.5, 0.6, 1.9, 2.0 /)
+    CALL norm2vec(vec1,4,num1)
+    WRITE(*,*) vec1
+    WRITE(*,*) num1
 
 END PROGRAM
