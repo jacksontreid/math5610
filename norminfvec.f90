@@ -11,7 +11,7 @@ SUBROUTINE norminfvec(vec, length, norm)
     INTEGER :: i
     REAL*8 :: num
 
-    norm = 0.
+    norm = 0.0d0
 
     DO i = 1, length
         num = vec(i)

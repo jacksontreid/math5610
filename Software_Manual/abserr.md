@@ -28,7 +28,7 @@
 ```
 Output from the lines above:
 ```
-      9.9182128906250000E-005
+9.9999999999766942E-005
 ```
 
 **Last Modified:** January/2018

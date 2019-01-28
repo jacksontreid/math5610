@@ -10,7 +10,7 @@ SUBROUTINE norm1vec(vec, length, norm)
     REAL*8, INTENT(out) :: norm
     INTEGER :: i
 
-    norm = 0.
+    norm = 0.0d0
 
     DO i = 1, length
         norm = norm + DABS(vec(i))

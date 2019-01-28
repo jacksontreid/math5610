@@ -28,7 +28,7 @@
 Output from the lines above:
 
 ```
-2.8670542265557466 
+2.8670542373662902 
 ```
 
 **Last Modified:** January/2018
