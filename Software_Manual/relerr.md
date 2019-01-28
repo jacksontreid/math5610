@@ -28,7 +28,7 @@
 ```
 Output from the lines above:
 ```
-3.9672851562500001E-006
+3.9999999999906774E-006
 ```
 
 **Last Modified:** January/2018

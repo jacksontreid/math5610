@@ -35,8 +35,8 @@ WRITE(*,*) ">>>TEST: RANDOM VECTOR"
 !Test error calculators
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: ERROR CALCS"
-    num1 = 25.0001
-    num2 = 25.0
+    num1 = 25.0001d0
+    num2 = 25.0d0
     CALL abserr(num1,num2,num3)
     WRITE(*,*) num3
 
@@ -46,8 +46,8 @@ WRITE(*,*) ">>>TEST: ERROR CALCS"
 !Test vector creation, addition, and scaling
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: VECTOR ADDITION AND SCALING"
-    vec1 = (/ 0.5, 0.6, 1.9, 2.0 /)
-    vec2 = (/ 0.2, 0.4, 0.1, 1.0 /)
+    vec1 = (/ 0.5d0, 0.6d0, 1.9d0, 2.0d0 /)
+    vec2 = (/ 0.2d0, 0.4d0, 0.1d0, 1.0d0 /)
     WRITE(*,*) vec1
     WRITE(*,*) vec2
 
@@ -60,7 +60,7 @@ WRITE(*,*) ">>>TEST: VECTOR ADDITION AND SCALING"
 !Test vector norms
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: VECTOR NORMS"
-    vec1 = (/ 0.5, 0.6, 1.9, 2.0 /)
+    vec1 = (/ 0.5d0, 0.6d0, 1.9d0, 2.0d0 /)
     WRITE(*,*) vec1
 
     CALL norm2vec(vec1,4,num1)
@@ -71,5 +71,7 @@ WRITE(*,*) ">>>TEST: VECTOR NORMS"
 
     CALL norminfvec(vec1,4,num1)
     WRITE(*,*) num1
+
+
 
 END PROGRAM
