@@ -3,7 +3,7 @@ IMPLICIT NONE
 
 REAL :: snum
 REAL*8 :: num1, num2, num3
-REAL*8 :: mat(4,3), vec1(4), vec2(4), vec3(4)
+REAL*8 :: mat1(4,3), mat2(3,3), vec1(4), vec2(4), vec3(4)
 INTEGER :: i
 
 !Seed random number generator
@@ -21,9 +21,9 @@ WRITE(*,*) ">>>TEST: MACHINE PRECISION"
 !Test random matrix generator
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: RANDOM MATRIX"
-    CALL randmat(4,3,mat)
+    CALL randmat(4,3,mat1)
     DO i = 1,4
-        WRITE(*,*) mat(i,:)
+        WRITE(*,*) mat1(i,:)
     END DO
 
 !Test random vector generator
@@ -72,6 +72,13 @@ WRITE(*,*) ">>>TEST: VECTOR NORMS"
     CALL norminfvec(vec1,4,num1)
     WRITE(*,*) num1
 
+!Test symmetric matrix generator
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: SYMMETRIC MATRIX"
+    CALL randsymmat(3,mat2)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
 
 
 END PROGRAM

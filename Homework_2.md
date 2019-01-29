@@ -10,7 +10,7 @@
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
-- [ ] [Task 9](#task-9)
+- [x] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
 ### Task 1
@@ -54,7 +54,8 @@ Implement a method that will compute the ∞-norm of an arbitrary vector will re
 
 ### Task 9
 Write a routine that will generate a symmetric matrix that has real values in all entries of the matrix. Add an entry to your for the method you create
-- 
+- Code: [randsymmat.f90](randsymmat.f90)
+- Software Manual [entry](Software_Manual/randsymmat.md).
 
 ### Task 10
 Search the internet for sites that discuss matrix norms. Look for sites that explain induced matrix norms. Write a brief summary of what you find. Limit the discussion to no more than two or three paragraphs and include links to the sites you cite.
