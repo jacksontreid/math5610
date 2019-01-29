@@ -12,6 +12,7 @@
 - [norminfvec](norminfvec.md)
 - [randmat](randmat.md)
 - [randseed](randseed.md)
+- [randsymmat](randsymmat.md)
 - [randvec](randvec.md)
 - [relerr](relerr.md)
 - [scalevec](scalevec.md)
