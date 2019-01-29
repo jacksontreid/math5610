@@ -35,4 +35,19 @@ Output from the lines above:
   0.25437725951443602       0.24935314780127815       0.33951724448334697     
   0.39717145361424211       0.47148224067412425       4.1826478143255241E-002
 ```
+**Implementation:**
+
+```
+SUBROUTINE randmat(r,c,mat)
+    IMPLICIT NONE
+
+    INTEGER, INTENT(in) :: r,c
+    REAL*8, INTENT(out) :: mat(r,c)
+
+    !Fill matrix with random numbers
+    CALL RANDOM_NUMBER(mat)
+
+END SUBROUTINE
+```
+
 **Last Modified:** January/2018

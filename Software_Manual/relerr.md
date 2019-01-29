@@ -31,5 +31,19 @@ Output from the lines above:
 3.9999999999906774E-006
 ```
 
+**Implementation:**
+
+```
+SUBROUTINE relerr(approx, exact, error)
+    IMPLICIT NONE
+
+    REAL*8, INTENT(in) :: approx, exact
+    REAL*8, INTENT(out) :: error
+
+    error = DABS((approx - exact)/exact)
+
+END SUBROUTINE
+```
+
 **Last Modified:** January/2018
 

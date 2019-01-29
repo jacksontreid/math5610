@@ -34,4 +34,22 @@ Output from the lines above:
 0.69999999999999996        1.0000000000000000        2.0000000000000000        3.0000000000000000 
 ```
 
+**Implementation:**
+
+```
+SUBROUTINE addvec(vec1, vec2, length, new_vec)
+    IMPLICIT NONE
+
+    INTEGER, INTENT(in) :: length
+    REAL*8, DIMENSION(length), INTENT(in) :: vec1, vec2
+    REAL*8, DIMENSION(length), INTENT(out) :: new_vec
+    INTEGER :: i
+
+    DO i = 1, length
+        new_vec(i) = vec1(i) + vec2(i)
+    END DO
+
+END SUBROUTINE
+```
+
 **Last Modified:** January/2018

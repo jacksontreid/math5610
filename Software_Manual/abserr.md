@@ -31,5 +31,19 @@ Output from the lines above:
 9.9999999999766942E-005
 ```
 
+**Implementation:**
+
+```
+SUBROUTINE abserr(approx, exact, error)
+    IMPLICIT NONE
+
+    REAL*8, INTENT(in) :: approx, exact
+    REAL*8, INTENT(out) :: error
+
+    error = DABS(approx - exact)
+
+END SUBROUTINE
+```
+
 **Last Modified:** January/2018
 

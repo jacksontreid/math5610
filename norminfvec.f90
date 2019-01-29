@@ -14,7 +14,7 @@ SUBROUTINE norminfvec(vec, length, norm)
     norm = 0.0d0
 
     DO i = 1, length
-        num = vec(i)
+        num = DABS(vec(i))
         IF (num > norm) THEN
             norm = num
         END IF
