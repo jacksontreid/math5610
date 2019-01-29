@@ -27,4 +27,19 @@ Output from the lines above:
 ```
 0.95935432750334526       0.50626493135725559       0.63550156014060255       0.39751387707198982
 ```
+**Implementation:**
+
+```
+SUBROUTINE randvec(r,vec)
+    IMPLICIT NONE
+
+    INTEGER, INTENT(in) :: r
+    REAL*8, INTENT(out) :: vec(r)
+
+    !Fill vector with random numbers
+    CALL RANDOM_NUMBER(vec)
+
+END SUBROUTINE
+```
+
 **Last Modified:** January/2018

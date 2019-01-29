@@ -33,4 +33,22 @@ Output from the lines above:
 1.0000000000000000        1.2000000000000000        3.7999999999999998        4.0000000000000000  
 ```
 
+**Implementation:**
+
+```
+SUBROUTINE scalevec(vec, length, const)
+    IMPLICIT NONE
+
+    INTEGER, INTENT(in) :: length
+    REAL*8, INTENT(in) :: const
+    REAL*8, DIMENSION(length), INTENT(inout) :: vec
+    INTEGER :: i
+
+    DO i = 1, length
+        vec(i) = const*vec(i)
+    END DO
+
+END SUBROUTINE
+```
+
 **Last Modified:** January/2018
