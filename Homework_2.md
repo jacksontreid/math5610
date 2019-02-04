@@ -11,7 +11,7 @@
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
 - [x] [Task 9](#task-9)
-- [ ] [Task 10](#task-10)
+- [x] [Task 10](#task-10)
 
 ### Task 1
 Email the link to your repository and table of contents for your completed homework tasks. I understand that this is a very easy task. Make sure that the link is an absolute link. The link should be to the username.github.io repository for the css formatted version.
@@ -60,4 +60,11 @@ Write a routine that will generate a symmetric matrix that has real values in al
 ### Task 10
 Search the internet for sites that discuss matrix norms. Look for sites that explain induced matrix norms. Write a brief summary of what you find. Limit the discussion to no more than two or three paragraphs and include links to the sites you cite.
 
-- 
+- > During the solution of many computational problems, the norms of both vectors and matrices are of interest. As such, it is desirable that the process used to compute the norms of vectors and matrices be related and comparable. To this end, a series of matrix norms, called _induced_ norms, are found using the definitions of vector p-norms. 
+  >
+  > Induced matrix norms are computed by, first, multiplying the matrix, _A_, by a vector, _x_, whose p-norm is unity. Then, because the result of this multiplication is a vector, the p-norm of the result is calculated. The process is repeated for all vectors _x_, whose p-norm is unity, and the maximum of all the resulting values is the induced matrix norm.
+  >
+  > The process of calculating norms for an infinite number of _x_ vectors is impractical. Luckily, there are simple definitions for the induced norms when p = 1, 2, and ∞. These definitions can be found in the following resources:
+  >
+  > - https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-241j-dynamic-systems-and-control-spring-2011/readings/MIT6_241JS11_chap04.pdf
+  > - https://nptel.ac.in/courses/122104019/numerical-analysis/kadalbajoo/lec1/fnode3.html
