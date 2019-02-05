@@ -3,7 +3,7 @@ IMPLICIT NONE
 
 REAL :: snum
 REAL*8 :: num1, num2, num3
-REAL*8 :: mat1(4,3), mat2(3,3), vec1(4), vec2(4), vec3(4)
+REAL*8 :: mat1(4,3), mat2(3,3), vec1(4), vec2(4), vec3(4), vec4(3), vec5(3)
 INTEGER :: i
 
 !Seed random number generator
@@ -112,5 +112,20 @@ WRITE(*,*) ">>>TEST: MATRIX NORMS"
 
     CALL norminfmat(mat2, 3, num1)
     WRITE(*,*) num1
+
+!Test vector dot and cross products
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: VECTOR DOT AND CROSS PRODUCT"
+    vec4 = (/ 0.5d0, 0.6d0, 1.9d0 /)
+    vec5 = (/ 0.2d0, 0.4d0, 0.1d0 /)
+    WRITE(*,*) vec4
+    WRITE(*,*) vec5
+
+    CALL dotvec(vec4,vec5,3,num1)
+    WRITE(*,*) num1
+
+
+
+
 
 END PROGRAM

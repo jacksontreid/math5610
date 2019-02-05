@@ -28,6 +28,7 @@
 
 #### _Vector/Matrix Operations_
 - [addvec](addvec.md)
+- [dotvec](dotvec.md)
 - [scalevec](scalevec.md)
 
 

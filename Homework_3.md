@@ -6,8 +6,8 @@
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
 - [x] [Task 4](#task-4)
-- [ ] [Task 5](#task-5)
-- [ ] [Task 6](#task-6)
+- [x] [Task 5](#task-5)
+- [x] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
@@ -40,7 +40,8 @@ Implement a method that returns the ∞-norm of a given square matrix. Add an en
 
 ### Task 6
 Implement a method that returns the dot produce of two vectors of the same length. Add an entry to your software manual that documents the method.
-- 
+- Code: [dotvec.f90](dotvec.f90)
+- Software Manual [entry](Software_Manual/dotvec.md).
 
 ### Task 7
 Implement a method that returns the cross-product of two vectors of length three. Add an entry to your software manual that documents the method.
