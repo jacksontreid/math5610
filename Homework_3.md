@@ -5,7 +5,7 @@
 - [x] [Task 1](#task-1)
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
-- [ ] [Task 4](#task-4)
+- [x] [Task 4](#task-4)
 - [ ] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
@@ -30,7 +30,8 @@ Implement a method that returns the absolute error in the approximation of one v
 
 ### Task 4
 Implement a method that returns the 1-matrix norm of a given square matrix. Add an entry to your software manual that documents the method.
-- 
+- Code: [norm1mat.f90](norm1mat.f90)
+- Software Manual [entry](Software_Manual/norm1mat.md).
 
 ### Task 5
 Implement a method that returns the ∞-norm of a given square matrix. Add an entry to your software manual that documents the method.
