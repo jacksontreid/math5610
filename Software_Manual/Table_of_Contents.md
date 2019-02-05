@@ -23,6 +23,7 @@
 - [norm1mat](norm1mat.md)
 - [norm1vec](norm1vec.md)
 - [norm2vec](norm2vec.md)
+- [norminfmat](norminfmat.md)
 - [norminfvec](norminfvec.md)
 
 #### _Vector/Matrix Operations_

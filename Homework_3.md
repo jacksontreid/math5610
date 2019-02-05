@@ -35,7 +35,8 @@ Implement a method that returns the 1-matrix norm of a given square matrix. Add 
 
 ### Task 5
 Implement a method that returns the ∞-norm of a given square matrix. Add an entry to your software manual that documents the method.
-- 
+- Code: [norminfmat.f90](norminfmat.f90)
+- Software Manual [entry](Software_Manual/norminfmat.md).
 
 ### Task 6
 Implement a method that returns the dot produce of two vectors of the same length. Add an entry to your software manual that documents the method.

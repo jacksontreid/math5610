@@ -1,12 +1,12 @@
 # MATH 5610 Software Manual
 
-### Subroutine: [_norm1mat_](../norm1mat.f90)
+### Subroutine: [_norminfmat_](../norminfmat.f90)
 
 **Author:** Jackson Reid
 
 **Language:** Fortran. The code can be [compiled](compilation.md) using the GNU Fortran compiler (gfortran).
 
-**Description:** This routine will compute the induced 1-norm of a square matrix.
+**Description:** This routine will compute the induced infinity-norm of a square matrix.
 
 **Inputs:** 
 
@@ -16,7 +16,7 @@
 
 **Outputs:** 
 
-​	_norm_ : REAL*8 -- the induced 1-norm of the matrix
+​	_norm_ : REAL*8 -- the induced infinity-norm of the matrix
 
 **Example Usage:** 
 
@@ -28,17 +28,17 @@
         WRITE(*,*) mat(i,:)
     END DO
 
-    CALL norm1mat(mat, 3, norm)
+    CALL norminfmat(mat, 3, norm)
     WRITE(*,*) norm
 ```
 Output from the lines above:
 ```
-3.0000000000000000 
+2.8999999999999999 
 ```
 **Implementation:**
 
 ```
-SUBROUTINE norm1mat(mat, n, norm)
+SUBROUTINE norminfmat(mat, n, norm)
     IMPLICIT NONE
 
     INTEGER, INTENT(in) :: n
@@ -50,13 +50,13 @@ SUBROUTINE norm1mat(mat, n, norm)
     norm = 0.0d0
 
     DO i = 1, n
-        !Calculate the 1-norm of each column
+        !Calculate the 1-norm of each row
         num = 0.0d0
         DO j = 1, n
-            num = num + DABS(mat(j,i))
+            num = num + DABS(mat(i,j))
         END DO
 
-        !Determine maximum column 1-norm
+        !Determine maximum row 1-norm
         IF (num > norm) THEN
             norm = num
         END IF
