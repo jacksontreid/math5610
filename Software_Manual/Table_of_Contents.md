@@ -9,6 +9,7 @@
 - [dmaceps](dmaceps.md)
 - [norm1abserr](norm1abserr.md)
 - [norm2abserr](norm2abserr.md)
+- [norminfabserr](norminfabserr.md)
 - [relerr](relerr.md)
 - [smaceps](smaceps.md)
 
