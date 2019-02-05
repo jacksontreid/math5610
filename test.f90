@@ -94,4 +94,7 @@ WRITE(*,*) ">>>TEST: VECTOR ERRORS"
     CALL norm1abserr(vec1, vec2, 4, num1)
     WRITE(*,*) num1
 
+    CALL norminfabserr(vec1, vec2, 4, num1)
+    WRITE(*,*) num1
+
 END PROGRAM
