@@ -3,7 +3,8 @@ IMPLICIT NONE
 
 REAL :: snum
 REAL*8 :: num1, num2, num3
-REAL*8 :: mat1(4,3), mat2(3,3), vec1(4), vec2(4), vec3(4), vec4(3), vec5(3)
+REAL*8 :: mat1(4,3), mat2(3,3)
+REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3)
 INTEGER :: i
 
 !Seed random number generator
@@ -124,6 +125,8 @@ WRITE(*,*) ">>>TEST: VECTOR DOT AND CROSS PRODUCT"
     CALL dotvec(vec4,vec5,3,num1)
     WRITE(*,*) num1
 
+    CALL crossvec(vec4,vec5,vec6)
+    WRITE(*,*) vec6
 
 
 

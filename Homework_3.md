@@ -8,7 +8,7 @@
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
-- [ ] [Task 7](#task-7)
+- [x] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
@@ -45,7 +45,8 @@ Implement a method that returns the dot produce of two vectors of the same lengt
 
 ### Task 7
 Implement a method that returns the cross-product of two vectors of length three. Add an entry to your software manual that documents the method.
-- 
+- Code: [crossvec.f90](crossvec.f90)
+- Software Manual [entry](Software_Manual/crossvec.md).
 
 ### Task 8
 Implement a method that returns the product of two matrices with an equal inner dimension. Add an entry to your software manual that documents the method.

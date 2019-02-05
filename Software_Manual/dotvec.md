@@ -25,7 +25,7 @@
 ```
       vec1 = (/ 0.5d0, 0.6d0, 1.9d0 /)
       vec2 = (/ 0.2d0, 0.4d0, 0.1d0 /)
-      CALL dotvec(vec1, vec2, 4, dot)
+      CALL dotvec(vec1, vec2, 3, dot)
       WRITE(*,*) dot
 ```
 Output from the lines above:
