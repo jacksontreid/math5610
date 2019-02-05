@@ -8,8 +8,9 @@
 
 - [Homework #1](Homework_1.md)
 - [Homework #2](Homework_2.md)
+- [Homework #3](Homework_3.md)
 
 
 
-**Updated:** January/2018
+**Updated:** February/2018
 
