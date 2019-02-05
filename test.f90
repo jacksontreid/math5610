@@ -97,4 +97,18 @@ WRITE(*,*) ">>>TEST: VECTOR ERRORS"
     CALL norminfabserr(vec1, vec2, 4, num1)
     WRITE(*,*) num1
 
+!Test matrix norms
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: MATRIX NORMS"
+    mat2 = RESHAPE((/0.5d0, 0.6d0, 1.9d0, &
+                   & 0.2d0, 0.4d0, 0.1d0, &
+                   & 0.4d0, 0.1d0, 1.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+
+    CALL norm1mat(mat2, 3, num1)
+    WRITE(*,*) num1
+
+
 END PROGRAM

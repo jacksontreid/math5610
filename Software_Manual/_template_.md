@@ -10,7 +10,7 @@
 
 **Inputs:** 
 
-​       _in1_ : REAL*8 -- the single-precision machine rounding unit
+​        _in1_ : REAL*8 -- the single-precision machine rounding unit
 
 ​	_in2_ : INTEGER -- the number of digits in the representation of real numbers in single precision
 

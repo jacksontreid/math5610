@@ -20,6 +20,7 @@
 - [randvec](randvec.md)
 
 #### _Vector/Matrix Norms_
+- [norm1mat](norm1mat.md)
 - [norm1vec](norm1vec.md)
 - [norm2vec](norm2vec.md)
 - [norminfvec](norminfvec.md)
