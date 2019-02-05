@@ -4,23 +4,34 @@
 
 ### Subroutines
 
+#### _Error Calculations_
 - [abserr](abserr.md)
-- [addvec](addvec.md)
 - [dmaceps](dmaceps.md)
-- [norm1vec](norm1vec.md)
-- [norm2vec](norm2vec.md)
-- [norminfvec](norminfvec.md)
+- [norm2abserr](norm2abserr.md)
+- [relerr](relerr.md)
+- [smaceps](smaceps.md)
+
+#### _Vector/Matrix Generation_
 - [randmat](randmat.md)
 - [randseed](randseed.md)
 - [randsymmat](randsymmat.md)
 - [randvec](randvec.md)
-- [relerr](relerr.md)
+
+#### _Vector/Matrix Norms_
+- [norm1vec](norm1vec.md)
+- [norm2vec](norm2vec.md)
+- [norminfvec](norminfvec.md)
+
+#### _Vector/Matrix Operations_
+- [addvec](addvec.md)
 - [scalevec](scalevec.md)
-- [smaceps](smaceps.md)
 
-### Software Use
 
+
+## Software Use
 - [Compilation](compilation.md)
 
-**Last Modified:** January/2018
+
+
+**Last Modified:** February/2019
 
