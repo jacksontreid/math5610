@@ -23,8 +23,8 @@
 **Example Usage:** 
 
 ```
-      vec = (/ 0.5, 0.6, 1.9, 2.0 /)
-      CALL addvec(vec, 4, DBLE(2.))
+      vec = (/ 0.5d0, 0.6d0, 1.9d0, 2.0d0 /)
+      CALL addvec(vec, 4, 2.0d0)
       WRITE(*,*) vec
 ```
 Output from the lines above:
@@ -51,4 +51,4 @@ SUBROUTINE scalevec(vec, length, const)
 END SUBROUTINE
 ```
 
-**Last Modified:** January/2018
+**Last Modified:** February/2019

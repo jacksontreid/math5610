@@ -21,7 +21,7 @@
 **Example Usage:** 
 
 ```
-      vec = (/ 0.5, 0.6, 1.9, 2.0 /)
+      vec = (/ 0.5d0, 0.6d0, 1.9d0, 2.0d0 /)
       CALL norminfvec(vec, 4, norm)
       WRITE(*,*) norm
 ```
@@ -55,5 +55,5 @@ SUBROUTINE norminfvec(vec, length, norm)
 END SUBROUTINE
 ```
 
-**Last Modified:** January/2018
+**Last Modified:** February/2019
 

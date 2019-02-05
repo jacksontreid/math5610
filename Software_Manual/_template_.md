@@ -1,6 +1,6 @@
 # MATH 5610 Software Manual
 
-### Subroutine: [_smaceps_](../smaceps.f90)
+### Subroutine: [_temp_](../temp.f90)
 
 **Author:** Jackson Reid
 
@@ -8,23 +8,27 @@
 
 **Description:** This routine will compute the single-precision machine rounding unit of a computer, and the number of digits used in the representation of real numbers in single precision.
 
-**Inputs:** None.
+**Inputs:** 
+
+​       _in1_ : REAL*8 -- the single-precision machine rounding unit
+
+​	_in2_ : INTEGER -- the number of digits in the representation of real numbers in single precision
 
 **Outputs:** 
 
-​	_seps_ : real -- the single-precision machine rounding unit
+​	_out1_ : REAL*8 -- the single-precision machine rounding unit
 
-​	_i_ : int -- the number of digits in the representation of real numbers in single precision
+​	_out2_ : INTEGER -- the number of digits in the representation of real numbers in single precision
 
 **Example Usage:** 
 
 ```
-      CALL smaceps(seps,i)
-      WRITE(*,*) i, seps
+      CALL temp(in1, in2, out1, out2)
+      WRITE(*,*) out1, out2
 ```
 Output from the lines above:
 ```
-24   5.96046448E-08
+
 ```
 **Implementation:**
 
@@ -34,5 +38,5 @@ Output from the lines above:
 
 
 
-**Last Modified:** January/2018
+**Last Modified:** MONTH/YEAR
 

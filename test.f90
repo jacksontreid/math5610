@@ -80,5 +80,10 @@ WRITE(*,*) ">>>TEST: SYMMETRIC MATRIX"
         WRITE(*,*) mat2(i,:)
     END DO
 
+!Test vector error
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: VECTOR ERRORS"
+    CALL norm2abserr(vec1, vec2, 4, num1)
+    WRITE(*,*) num1
 
 END PROGRAM

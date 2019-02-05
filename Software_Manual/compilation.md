@@ -15,5 +15,5 @@ Or, a library can be created from the routines
     $ ar rcv mylib *.o
 ```
 
-**Last Modified:** January/2018
+**Last Modified:** February/2019
 

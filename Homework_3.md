@@ -2,7 +2,7 @@
 
 ## Homework #3
 
-- [ ] [Task 1](#task-1)
+- [x] [Task 1](#task-1)
 - [ ] [Task 2](#task-2)
 - [ ] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
@@ -15,7 +15,8 @@
 
 ### Task 1
 Implement a method that returns the absolute error in the approximation of one vector by another when the 2-norm is used. Make sure to add an entry to your software manual to document the work.
-- 
+- Code: [norm2abserr.f90](norm2abserr.f90)
+- Software Manual [entry](Software_Manual/norm2abserr.md).
 
 ### Task 2
 Implement a method that returns the absolute error in the approximation of one vector by another when the 1-norm is used. Add an entry to your software manual that documents the method.

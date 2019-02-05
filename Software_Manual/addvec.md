@@ -23,8 +23,8 @@
 **Example Usage:** 
 
 ```
-      vec1 = (/ 0.5, 0.6, 1.9, 2.0 /)
-      vec2 = (/ 0.2, 0.4, 0.1, 1.0 /)
+      vec1 = (/ 0.5d0, 0.6d0, 1.9d0, 2.0d0 /)
+      vec2 = (/ 0.2d0, 0.4d0, 0.1d0, 1.0d0 /)
       CALL addvec(vec1, vec2, 4, new_vec)
       WRITE(*,*) new_vec
 ```
@@ -52,4 +52,4 @@ SUBROUTINE addvec(vec1, vec2, length, new_vec)
 END SUBROUTINE
 ```
 
-**Last Modified:** January/2018
+**Last Modified:** February/2019

@@ -21,8 +21,8 @@
 **Example Usage:** 
 
 ```
-      approx = 25.0001
-      exact = 25.0
+      approx = 25.0001d0
+      exact = 25.0d0
       CALL relerr(approx, exact, error)
       WRITE(*,*) error
 ```
@@ -45,5 +45,5 @@ SUBROUTINE relerr(approx, exact, error)
 END SUBROUTINE
 ```
 
-**Last Modified:** January/2018
+**Last Modified:** February/2019
 
