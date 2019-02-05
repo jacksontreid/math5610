@@ -7,6 +7,7 @@
 #### _Error Calculations_
 - [abserr](abserr.md)
 - [dmaceps](dmaceps.md)
+- [norm1abserr](norm1abserr.md)
 - [norm2abserr](norm2abserr.md)
 - [relerr](relerr.md)
 - [smaceps](smaceps.md)

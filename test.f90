@@ -83,7 +83,15 @@ WRITE(*,*) ">>>TEST: SYMMETRIC MATRIX"
 !Test vector error
 WRITE(*,*)
 WRITE(*,*) ">>>TEST: VECTOR ERRORS"
+    vec1 = (/ 0.5d0, 0.6d0, 1.9d0, 2.0d0 /)
+    vec2 = (/ 0.2d0, 0.4d0, 0.1d0, 1.0d0 /)
+    WRITE(*,*) vec1
+    WRITE(*,*) vec2
+
     CALL norm2abserr(vec1, vec2, 4, num1)
+    WRITE(*,*) num1
+
+    CALL norm1abserr(vec1, vec2, 4, num1)
     WRITE(*,*) num1
 
 END PROGRAM

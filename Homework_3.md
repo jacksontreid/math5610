@@ -20,7 +20,8 @@ Implement a method that returns the absolute error in the approximation of one v
 
 ### Task 2
 Implement a method that returns the absolute error in the approximation of one vector by another when the 1-norm is used. Add an entry to your software manual that documents the method.
-- 
+- Code: [norm1abserr.f90](norm1abserr.f90)
+- Software Manual [entry](Software_Manual/norm1abserr.md).
 
 ### Task 3
 Implement a method that returns the absolute error in the approximation of one vector by another when the ∞-norm is used. Add an entry to your software manual that documents the method.
