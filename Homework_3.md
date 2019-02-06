@@ -9,8 +9,8 @@
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
-- [ ] [Task 8](#task-8)
-- [ ] [Task 9](#task-9)
+- [x] [Task 8](#task-8)
+- [x] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
 ### Task 1
@@ -55,7 +55,8 @@ Implement a method that returns the product of two matrices with an equal inner 
 
 ### Task 9
 Write a routine that will generate a diagonally dominant matrix that has real values in all entries of the matrix. Add an entry to your for the method you create.
-- 
+- Code: [randdommat.f90](randdommat.f90)
+- Software Manual [entry](Software_Manual/randdommat.md).
 
 ### Task 10
 Search the internet for sites that define and discuss the Frobenius matrix norm. Also, look for sites that define consistent matrix norms. Summarize in a paragraph or two what you found and as usual cite the sites.

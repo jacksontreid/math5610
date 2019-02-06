@@ -152,5 +152,13 @@ WRITE(*,*) ">>>TEST: MATRIX MULTIPLICATION"
         WRITE(*,*) mat3(i,:)
     END DO
 
+!Test random diagonally dominant matrix generator
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: RANDOM D-DOM MATRIX"
+    CALL randdommat(3,mat2)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+
 
 END PROGRAM
