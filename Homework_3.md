@@ -50,7 +50,8 @@ Implement a method that returns the cross-product of two vectors of length three
 
 ### Task 8
 Implement a method that returns the product of two matrices with an equal inner dimension. Add an entry to your software manual that documents the method.
-- 
+- Code: [multmat.f90](multmat.f90)
+- Software Manual [entry](Software_Manual/multmat.md).
 
 ### Task 9
 Write a routine that will generate a diagonally dominant matrix that has real values in all entries of the matrix. Add an entry to your for the method you create.

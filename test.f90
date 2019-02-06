@@ -3,7 +3,7 @@ IMPLICIT NONE
 
 REAL :: snum
 REAL*8 :: num1, num2, num3
-REAL*8 :: mat1(4,3), mat2(3,3)
+REAL*8 :: mat1(4,3), mat2(3,3), mat3(4,3)
 REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3)
 INTEGER :: i
 
@@ -128,7 +128,29 @@ WRITE(*,*) ">>>TEST: VECTOR DOT AND CROSS PRODUCT"
     CALL crossvec(vec4,vec5,vec6)
     WRITE(*,*) vec6
 
+!Test matrix multiplication
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: MATRIX MULTIPLICATION"
+    mat1 = RESHAPE((/0.4d0, 0.6d0, 1.9d0, &
+                   & 0.2d0, 0.4d0, 0.1d0, &
+                   & 0.4d0, 0.1d0, 1.0d0, &
+                   & 2.0d0, 0.7d0, 0.2d0/),(/4,3/),ORDER=(/2,1/))
+    mat2 = RESHAPE((/0.4d0, 0.6d0, 1.9d0, &
+                   & 0.2d0, 0.4d0, 0.1d0, &
+                   & 0.4d0, 0.1d0, 1.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,4
+        WRITE(*,*) mat1(i,:)
+    END DO
+    WRITE(*,*)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
 
+    CALL multmat(mat1,mat2,4,3,3,mat3)
+    DO i = 1,4
+        WRITE(*,*) mat3(i,:)
+    END DO
 
 
 END PROGRAM

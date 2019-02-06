@@ -30,6 +30,7 @@
 - [addvec](addvec.md)
 - [crossvec](crossvec.md)
 - [dotvec](dotvec.md)
+- [multmat](multmat.md)
 - [scalevec](scalevec.md)
 
 
