@@ -15,6 +15,7 @@
 
 #### _Vector/Matrix Generation_
 - [randmat](randmat.md)
+- [randdommat](randdommat.md)
 - [randseed](randseed.md)
 - [randsymmat](randsymmat.md)
 - [randvec](randvec.md)
