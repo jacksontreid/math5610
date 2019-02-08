@@ -20,7 +20,8 @@ Implement a method that returns the scalar multiple of a given matrix. Add an en
 
 ### Task 2
 Implement a method that returns the sum of two matrices of the same size. Add an entry to your software manual that documents the method.
-- 
+- Code: [addmat.f90](addmat.f90)
+- Software Manual [entry](Software_Manual/addmat.md).
 
 ### Task 3
 Implement a method that will return the outer product of two vectors. Add an entry to your software manual documenting the method.
