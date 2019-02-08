@@ -28,6 +28,7 @@
 - [norminfvec](norminfvec.md)
 
 #### _Vector/Matrix Operations_
+- [addmat](addmat.md)
 - [addvec](addvec.md)
 - [crossvec](crossvec.md)
 - [dotvec](dotvec.md)
