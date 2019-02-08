@@ -2,7 +2,7 @@
 
 ## Homework #4
 
-- [ ] [Task 1](#task-1)
+- [x] [Task 1](#task-1)
 - [ ] [Task 2](#task-2)
 - [ ] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
@@ -15,7 +15,8 @@
 
 ### Task 1
 Implement a method that returns the scalar multiple of a given matrix. Add an entry to your software manual documenting the method.
-- 
+- Code: [scalemat.f90](scalemat.f90)
+- Software Manual [entry](Software_Manual/scalemat.md).
 
 ### Task 2
 Implement a method that returns the sum of two matrices of the same size. Add an entry to your software manual that documents the method.

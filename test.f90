@@ -160,5 +160,25 @@ WRITE(*,*) ">>>TEST: RANDOM D-DOM MATRIX"
         WRITE(*,*) mat2(i,:)
     END DO
 
+!Test matrix addition and scaling
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: VECTOR ADDITION AND SCALING"
+    mat1 = RESHAPE((/0.4d0, 0.6d0, 1.9d0, &
+                   & 0.2d0, 0.4d0, 0.1d0, &
+                   & 0.4d0, 0.1d0, 1.0d0, &
+                   & 2.0d0, 0.7d0, 0.2d0/),(/4,3/),ORDER=(/2,1/))
+    DO i = 1,4
+        WRITE(*,*) mat1(i,:)
+    END DO
+    WRITE(*,*)
+
+    CALL scalemat(mat1, 4, 3, 2.0d0)
+    DO i = 1,4
+        WRITE(*,*) mat1(i,:)
+    END DO
+
+
+
+
 
 END PROGRAM
