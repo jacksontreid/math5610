@@ -11,7 +11,7 @@
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
 - [x] [Task 9](#task-9)
-- [ ] [Task 10](#task-10)
+- [x] [Task 10](#task-10)
 
 ### Task 1
 Implement a method that returns the absolute error in the approximation of one vector by another when the 2-norm is used. Make sure to add an entry to your software manual to document the work.
