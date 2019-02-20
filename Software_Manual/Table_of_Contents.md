@@ -33,6 +33,7 @@
 - [crossvec](crossvec.md)
 - [dotvec](dotvec.md)
 - [multmat](multmat.md)
+- [outervec](outervec.md)
 - [scalemat](scalemat.md)
 - [scalevec](scalevec.md)
 

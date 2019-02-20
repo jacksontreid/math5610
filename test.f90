@@ -192,7 +192,19 @@ WRITE(*,*) ">>>TEST: VECTOR ADDITION AND SCALING"
     END DO
 
 
+!Test vector outer product
+WRITE(*,*)
+WRITE(*,*) ">>>TEST: VECTOR OUTER PRODUCT"
+    vec1 = (/ 0.5d0, 0.6d0, 1.9d0, 2.0d0 /)
+    vec5 = (/ 0.2d0, 0.4d0, 0.1d0 /)
+    WRITE(*,*) vec1
+    WRITE(*,*) vec5
+    WRITE(*,*)
 
+    CALL outervec(vec1,4,vec5,3,mat1)
+    DO i = 1,4
+        WRITE(*,*) mat1(i,:)
+    END DO
 
 
 
