@@ -3,8 +3,8 @@
 ## Homework #4
 
 - [x] [Task 1](#task-1)
-- [ ] [Task 2](#task-2)
-- [ ] [Task 3](#task-3)
+- [x] [Task 2](#task-2)
+- [x] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
 - [ ] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
@@ -25,7 +25,8 @@ Implement a method that returns the sum of two matrices of the same size. Add an
 
 ### Task 3
 Implement a method that will return the outer product of two vectors. Add an entry to your software manual documenting the method.
-- 
+- Code: [outervec.f90](outervec.f90)
+- Software Manual [entry](Software_Manual/outervec.md).
 
 ### Task 4
 Implement a method that will compute the solution of a square linear system of equations where the coefficient matrix is a diagonal matrix.
@@ -36,7 +37,7 @@ Implement a method that will compute the solution of a square linear system of e
 - 
 
 ### Task 6
-Implement a method that will compute the solution of a square linear system of equations where the coefficient matrix is lower triangular. Document this backsubstitution method in a software manual entry.
+Implement a method that will compute the solution of a square linear system of equations where the coefficient matrix is lower triangular. Document this forwardsubstitution method in a software manual entry.
 - 
 
 ### Task 7
