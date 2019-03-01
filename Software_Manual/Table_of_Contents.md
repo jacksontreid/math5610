@@ -40,6 +40,7 @@
 #### _Linear Systems_
 - [backsub](backsub.md)
 - [forsub](forsub.md)
+- [rowechelon](rowechelon.md)
 - [solvediagsys](solvediagsys.md)
 
 
