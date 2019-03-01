@@ -37,6 +37,10 @@
 - [scalemat](scalemat.md)
 - [scalevec](scalevec.md)
 
+#### _Linear Systems_
+- [solvediagsys](solvediagsys.md)
+
+
 
 
 ## Software Use
@@ -44,5 +48,5 @@
 
 
 
-**Last Modified:** February/2019
+**Last Modified:** March/2019
 
