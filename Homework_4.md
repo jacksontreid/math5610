@@ -5,7 +5,7 @@
 - [x] [Task 1](#task-1)
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
-- [ ] [Task 4](#task-4)
+- [x] [Task 4](#task-4)
 - [ ] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
@@ -30,7 +30,8 @@ Implement a method that will return the outer product of two vectors. Add an ent
 
 ### Task 4
 Implement a method that will compute the solution of a square linear system of equations where the coefficient matrix is a diagonal matrix.
-- 
+- Code: [solvediagsys.f90](solvediagsys.f90)
+- Software Manual [entry](Software_Manual/solvediagsys.md).
 
 ### Task 5
 Implement a method that will compute the solution of a square linear system of equations where the coefficient matrix is upper triangular. Document this backsubstitution method in a software manual entry.
