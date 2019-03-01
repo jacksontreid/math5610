@@ -38,8 +38,9 @@
 - [scalevec](scalevec.md)
 
 #### _Linear Systems_
-- [solvediagsys](solvediagsys.md)
 - [backsub](backsub.md)
+- [forsub](forsub.md)
+- [solvediagsys](solvediagsys.md)
 
 
 
