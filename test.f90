@@ -238,6 +238,22 @@ WRITE(*,*) "   DIAGONAL"
 
     CALL backsub(mat2,3,vec4,vec5)
     WRITE(*,*) vec5
+    WRITE(*,*)
+
+    WRITE(*,*) "   LOWER TRIANGULAR"
+    mat2 = RESHAPE((/0.4d0, 0.0d0, 0.0d0, &
+                   & 0.6d0, 0.4d0, 0.0d0, &
+                   & 1.9d0, 0.1d0, 1.0d0/),(/3,3/),ORDER=(/2,1/))
+    vec4 = (/ 0.2d0, 0.4d0, 0.1d0 /)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec4
+    WRITE(*,*)
+
+    CALL forsub(mat2,3,vec4,vec5)
+    WRITE(*,*) vec5
 
 
 END PROGRAM
