@@ -9,7 +9,6 @@ SUBROUTINE solvediagsys(A,n,b,x)
     INTEGER, INTENT(in) :: n
     REAL*8, INTENT(in) :: A(n,n), b(n)
     REAL*8, INTENT(out) :: x(n)
-    REAL*8 :: Ad
     INTEGER :: i
 
     DO i = 1, n

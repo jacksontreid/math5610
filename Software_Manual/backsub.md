@@ -1,16 +1,16 @@
 # MATH 5610 Software Manual
 
-### Subroutine: [_solvediagsys_](../solvediagsys.f90)
+### Subroutine: [_backsub_](../backsub.f90)
 
 **Author:** Jackson Reid
 
 **Language:** Fortran. The code can be [compiled](compilation.md) using the GNU Fortran compiler (gfortran).
 
-**Description:** This routine will compute the solution of a square linear system, _A_ _x_ = _b_, with a diagonal coefficient matrix.
+**Description:** This routine will compute the solution of a square linear system, _A_ _x_ = _b_, with an upper triangular coefficient matrix, using back-substitution.
 
 **Inputs:** 
 
-​        _A_ : REAL*8 -- an array of size (_n_,_n_) containing non-zero values only along the diagonal
+​        _A_ : REAL*8 -- an array of size (_n_,_n_) containing non-zero values only in the upper triangle
 
 ​	_n_ : INTEGER -- the number describing the size of _A_ and _b_
 
@@ -23,31 +23,37 @@
 **Example Usage:** 
 
 ```
-    A = RESHAPE((/0.4d0, 0.0d0, 0.0d0, &
-                & 0.0d0, 0.4d0, 0.0d0, &
+    A = RESHAPE((/0.4d0, 0.6d0, 1.9d0, &
+                & 0.0d0, 0.4d0, 0.1d0, &
                 & 0.0d0, 0.0d0, 1.0d0/),(/3,3/),ORDER=(/2,1/))
     b = (/ 0.2d0, 0.4d0, 0.1d0 /)
 
-    CALL solvediagsys(A,3,b,x)
+    CALL backsub(A,3,b,x)
     WRITE(*,*) x
 ```
 Output from the lines above:
 ```
-  0.50000000000000000        1.0000000000000000       0.10000000000000001
+  -1.4374999999999998       0.97499999999999998       0.10000000000000001 
 ```
 **Implementation:**
 
 ```
-SUBROUTINE solvediagsys(A,n,b,x)
+SUBROUTINE backsub(A,n,b,x)
     IMPLICIT NONE
 
     INTEGER, INTENT(in) :: n
     REAL*8, INTENT(in) :: A(n,n), b(n)
     REAL*8, INTENT(out) :: x(n)
-    INTEGER :: i
+    INTEGER :: i, j
 
-    DO i = 1, n
-        x(i) = b(i)/A(i,i)
+    x(n) = b(n)/A(n,n)
+
+    DO i = n-1,1,-1
+        x(i) = b(i)
+        DO j = i+1,n
+            x(i) = x(i) - x(j)*A(i,j)
+        END DO
+        x(i) = x(i)/A(i,i)
     END DO
 
 END SUBROUTINE

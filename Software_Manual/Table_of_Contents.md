@@ -39,6 +39,7 @@
 
 #### _Linear Systems_
 - [solvediagsys](solvediagsys.md)
+- [backsub](backsub.md)
 
 
 

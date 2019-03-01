@@ -6,7 +6,7 @@
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
 - [x] [Task 4](#task-4)
-- [ ] [Task 5](#task-5)
+- [x] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
@@ -35,7 +35,8 @@ Implement a method that will compute the solution of a square linear system of e
 
 ### Task 5
 Implement a method that will compute the solution of a square linear system of equations where the coefficient matrix is upper triangular. Document this backsubstitution method in a software manual entry.
-- 
+- Code: [backsub.f90](backsub.f90)
+- Software Manual [entry](Software_Manual/backsub.md).
 
 ### Task 6
 Implement a method that will compute the solution of a square linear system of equations where the coefficient matrix is lower triangular. Document this forwardsubstitution method in a software manual entry.
