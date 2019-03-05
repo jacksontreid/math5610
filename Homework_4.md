@@ -9,7 +9,7 @@
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
-- [ ] [Task 8](#task-8)
+- [x] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
@@ -50,7 +50,8 @@ Implement a method that will perform elementary row operations on a matrix to ta
 
 ### Task 8
 Using previous methods you have created, write a code that will solve a square linear system of equations using Gaussian elimination (elementary row operations) to reduce the augmented coefficient matrix to row echelon form and then apply backsubstitution to determine an approximate solution for the linear system.
-- 
+- Code: [solvegausselim.f90](solvegausselim.f90)
+- Software Manual [entry](Software_Manual/solvegausselim.md).
 
 ### Task 9
 Write a routine that will generate a symmetric diagonally dominant matrix that has real values in all entries of the matrix. Add an entry to your for the method you create.
