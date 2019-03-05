@@ -42,6 +42,7 @@
 - [forsub](forsub.md)
 - [rowechelon](rowechelon.md)
 - [solvediagsys](solvediagsys.md)
+- [solvegausselim](solvegausselim.md)
 
 
 
