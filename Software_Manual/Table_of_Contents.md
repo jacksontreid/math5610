@@ -18,6 +18,7 @@
 - [randdommat](randdommat.md)
 - [randseed](randseed.md)
 - [randsymmat](randsymmat.md)
+- [randsymdommat](randsymdommat.md)
 - [randvec](randvec.md)
 
 #### _Vector/Matrix Norms_

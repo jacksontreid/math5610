@@ -159,6 +159,12 @@ WRITE(*,*) ">>>TEST: RANDOM D-DOM MATRIX"
     DO i = 1,3
         WRITE(*,*) mat2(i,:)
     END DO
+    WRITE(*,*)
+
+    CALL randsymdommat(3,mat2)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
 
 !Test matrix addition and scaling
 WRITE(*,*)

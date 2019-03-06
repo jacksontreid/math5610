@@ -10,7 +10,7 @@
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
-- [ ] [Task 9](#task-9)
+- [x] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
 ### Task 1
@@ -55,7 +55,8 @@ Using previous methods you have created, write a code that will solve a square l
 
 ### Task 9
 Write a routine that will generate a symmetric diagonally dominant matrix that has real values in all entries of the matrix. Add an entry to your for the method you create.
-- 
+- Code: [randsymdommat.f90](randsymdommat.f90)
+- Software Manual [entry](Software_Manual/randsymdommat.md).
 
 ### Task 10
 Search the internet for sites that discuss parallel algorithms for matrix-vector multiplication and matrix-matrix multiplication. Summarize in a paragraph or two and as always, cite your sites.
