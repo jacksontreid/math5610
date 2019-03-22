@@ -2,10 +2,11 @@ PROGRAM test
 IMPLICIT NONE
 
 REAL :: snum
-REAL*8 :: num1, num2, num3
+REAL*8 :: num1, num2, num3, num4
 REAL*8 :: mat1(4,3), mat2(3,3), mat3(4,3), mat4(4,3), mat5(3,4)
+REAL*8, ALLOCATABLE :: matall1(:,:), vecall1(:), vecall2(:), vecall3(:)
 REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3)
-INTEGER :: i
+INTEGER :: i, n
 
 !Seed random number generator
 CALL randseed()
@@ -293,10 +294,34 @@ WRITE(*,*) "   DIAGONAL"
 
     CALL solvegausselim(mat2,3,vec4,vec5)
     WRITE(*,*) vec5
+    WRITE(*,*)
 
+    CALL solvegausselim2(mat2,3,vec4,vec5)
+    WRITE(*,*) vec5
+    WRITE(*,*)
 
+    WRITE(*,*) "   GAUSSIAN ELIMINATION TIME TEST"
 
+!    DO i = 1,4
+!        n = 10**i
+!        ALLOCATE(matall1(n,n),vecall1(n),vecall2(n),vecall3(n))
 
+!        CALL randmat(n,n,matall1)
+
+!        CALL CPU_TIME(num1)
+!        CALL solvegausselim(matall1,n,vecall1,vecall2)
+!        CALL CPU_TIME(num2)
+!        num3 = num2 - num1
+
+!        CALL CPU_TIME(num1)
+!        CALL solvegausselim2(matall1,n,vecall1,vecall3)
+!        CALL CPU_TIME(num2)
+!        num4 = num2 - num1
+
+!        WRITE(*,*) n, num3, num4
+
+!        DEALLOCATE(matall1,vecall1,vecall2,vecall3)
+!    END DO
 
 
 

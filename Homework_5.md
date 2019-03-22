@@ -2,7 +2,7 @@
 
 ## Homework #5
 
-- [ ] [Task 1](#task-1)
+- [x] [Task 1](#task-1)
 - [ ] [Task 2](#task-2)
 - [ ] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
@@ -15,7 +15,20 @@
 
 ### Task 1
 Implement a method that will return the approximate solution of a square linear system of equations where previous methods are not used. That is, inline the row reduction operations and the backsubstitution methods. Test the speed of the code you generated in this problem and the code that references your previous methods. Try this for increasing sizes of the linear system. You will likely need to use large systems of linear equations - possibly 10,000 by 10,000 to see any kind of time. Use cpu_timing methods in the language you have chosen to do your coding. Add a manual page to document the inline version of the solution process. Report any differences you see in the time it takes to solve the linear systems in the two approaches.
-- 
+- Code: [solvegausselim2.f90](solvegausselim2.f90)
+
+- Software Manual [entry](Software_Manual/solvegausselim2.md).
+
+
+
+|   n    |     External (sec)      |      In-Line (sec)      |
+| :----: | :---------------------: | :---------------------: |
+|   10   |   0.0000000000000000    |   0.0000000000000000    |
+|  100   | 4.0000000000000001E-003 | 4.0000000000000001E-003 |
+| 1,000  |   1.4199999999999999    |   1.3839999999999999    |
+| 10,000 |   6597.9240000000000    |   2526.2799999999997    |
+
+  
 
 ### Task 2
 Implement a method that returns the LU-factorization of a square matrix. Add an entry to your software manual to document the method you have created. Hint: You can actually modify the Gaussian elimination code in two lines to come up with the new method.

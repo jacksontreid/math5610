@@ -44,6 +44,7 @@
 - [rowechelon](rowechelon.md)
 - [solvediagsys](solvediagsys.md)
 - [solvegausselim](solvegausselim.md)
+- [solvegausselim2](solvegausselim2.md)
 
 
 
