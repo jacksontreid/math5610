@@ -323,7 +323,19 @@ WRITE(*,*) "   DIAGONAL"
 !        DEALLOCATE(matall1,vecall1,vecall2,vecall3)
 !    END DO
 
+    WRITE(*,*) "   LU DECOMPOSITION"
+    mat2 = RESHAPE((/1.0d0, -1.0d0, 3.0d0, &
+                   & 1.0d0, 1.0d0, 0.0d0, &
+                   & 3.0d0, -2.0d0, 1.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
 
+    CALL LUdecomp(mat2,3)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
 
 
 END PROGRAM
