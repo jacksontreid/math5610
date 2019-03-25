@@ -42,6 +42,7 @@
 - [backsub](backsub.md)
 - [forsub](forsub.md)
 - [rowechelon](rowechelon.md)
+- [LUdecomp](LUdecomp.md)
 - [solvediagsys](solvediagsys.md)
 - [solvegausselim](solvegausselim.md)
 - [solvegausselim2](solvegausselim2.md)

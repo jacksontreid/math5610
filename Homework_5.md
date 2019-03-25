@@ -3,7 +3,7 @@
 ## Homework #5
 
 - [x] [Task 1](#task-1)
-- [ ] [Task 2](#task-2)
+- [x] [Task 2](#task-2)
 - [ ] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
 - [ ] [Task 5](#task-5)
@@ -32,7 +32,8 @@ Implement a method that will return the approximate solution of a square linear 
 
 ### Task 2
 Implement a method that returns the LU-factorization of a square matrix. Add an entry to your software manual to document the method you have created. Hint: You can actually modify the Gaussian elimination code in two lines to come up with the new method.
-- 
+- Code: [LUdecomp.f90](LUdecomp.f90)
+- Software Manual [entry](Software_Manual/LUdecomp.md).
 
 ### Task 3
 Use the LU factorization method you created in the previous step, along with the forward substitution method (for lower triangular square systems) and the back substitution method (for upper triangular square systems) to create a method that will solve a square linear system of equations. Document the method in your software manual.
