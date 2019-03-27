@@ -337,6 +337,7 @@ WRITE(*,*) "   DIAGONAL"
         WRITE(*,*) mat2(i,:)
     END DO
 
+    WRITE(*,*)
     WRITE(*,*) "   SOLVE LU DECOMPOSITION"
     mat2 = RESHAPE((/0.4d0, 0.6d0, 1.9d0, &
                    & 0.6d0, 0.4d0, 0.1d0, &
@@ -352,6 +353,21 @@ WRITE(*,*) "   DIAGONAL"
     CALL solveLUfactor(mat2,3,vec4,vec5,.TRUE.)
     WRITE(*,*) vec5
     WRITE(*,*)
+
+
+    WRITE(*,*) "   CHOLESKY DECOMPOSITION"
+    mat2 = RESHAPE((/4.0d0, 12.0d0, -16.0d0, &
+                   & 12.0d0, 37.0d0, -43.0d0, &
+                   & -16.0d0, -43.0d0, 98.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+
+    CALL choldecomp(mat2,3)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
 
 
 END PROGRAM
