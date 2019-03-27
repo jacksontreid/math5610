@@ -6,7 +6,7 @@
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
-- [ ] [Task 5](#task-5)
+- [x] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
@@ -46,7 +46,8 @@ Write a code that will generate a symmetric, positive definite matrix for a give
 
 ### Task 5
 Implement the Cholesky factorization method for square matrices. Do not include any pivoting in the algorithm. Document the algorithm in your software manual. Test the code on at least 2 or 3 matrices of different sizes. At least one example should involve a matrix that is bigger than 100×100 in size. Use output from the method you created in the previous task.
-- 
+- Code: [choldecomp.f90](choldecomp.f90)
+- Software Manual [entry](Software_Manual/choldecomp.md).
 
 ### Task 6
 Write a routine/method that will return an approximate solution of the least squares problem using the normal equation approach. Create an entry in your software manual for the method. Also, make sure you use the Cholesky algorithm that you created in a previous task.

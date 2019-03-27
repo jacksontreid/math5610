@@ -40,6 +40,7 @@
 
 #### _Linear Systems_
 - [backsub](backsub.md)
+- [choldecomp](choldecomp.md)
 - [forsub](forsub.md)
 - [rowechelon](rowechelon.md)
 - [LUdecomp](LUdecomp.md)
