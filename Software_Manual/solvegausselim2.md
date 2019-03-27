@@ -10,7 +10,7 @@
 
 **Inputs:** 
 
-​        _A_ : REAL*8 -- an array of size (_n_,_n_) containing non-zero values only in the upper triangle
+​        _A_ : REAL*8 -- an array of size (_n_,_n_) containing non-zero values
 
 ​	_n_ : INTEGER -- the number describing the size of _A_ and _b_
 

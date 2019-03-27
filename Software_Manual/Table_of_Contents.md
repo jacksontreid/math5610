@@ -46,6 +46,7 @@
 - [solvediagsys](solvediagsys.md)
 - [solvegausselim](solvegausselim.md)
 - [solvegausselim2](solvegausselim2.md)
+- [solveLUfactor](solveLUfactor.md)
 
 
 
