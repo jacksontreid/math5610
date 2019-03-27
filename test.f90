@@ -300,7 +300,7 @@ WRITE(*,*) "   DIAGONAL"
     WRITE(*,*) vec5
     WRITE(*,*)
 
-    WRITE(*,*) "   GAUSSIAN ELIMINATION TIME TEST"
+!    WRITE(*,*) "   GAUSSIAN ELIMINATION TIME TEST"
 
 !    DO i = 1,4
 !        n = 10**i
@@ -336,6 +336,22 @@ WRITE(*,*) "   DIAGONAL"
     DO i = 1,3
         WRITE(*,*) mat2(i,:)
     END DO
+
+    WRITE(*,*) "   SOLVE LU DECOMPOSITION"
+    mat2 = RESHAPE((/0.4d0, 0.6d0, 1.9d0, &
+                   & 0.6d0, 0.4d0, 0.1d0, &
+                   & 1.9d0, 0.1d0, 1.0d0/),(/3,3/),ORDER=(/2,1/))
+    vec4 = (/ 0.2d0, 0.4d0, 0.1d0 /)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec4
+    WRITE(*,*)
+
+    CALL solveLUfactor(mat2,3,vec4,vec5,.TRUE.)
+    WRITE(*,*) vec5
+    WRITE(*,*)
 
 
 END PROGRAM

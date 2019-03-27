@@ -4,7 +4,7 @@
 
 - [x] [Task 1](#task-1)
 - [x] [Task 2](#task-2)
-- [ ] [Task 3](#task-3)
+- [x] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
 - [ ] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
@@ -37,7 +37,8 @@ Implement a method that returns the LU-factorization of a square matrix. Add an 
 
 ### Task 3
 Use the LU factorization method you created in the previous step, along with the forward substitution method (for lower triangular square systems) and the back substitution method (for upper triangular square systems) to create a method that will solve a square linear system of equations. Document the method in your software manual.
-- 
+- Code: [solveLUfactor.f90](solveLUfactor.f90)
+- Software Manual [entry](Software_Manual/solveLUfactor.md).
 
 ### Task 4
 Write a code that will generate a symmetric, positive definite matrix for a given integer, n. Make sure that you add an entry to your software manual with a couple of examples. Your examples should be relatively small for your examples, but you should include a large example in the task solution write-up.
