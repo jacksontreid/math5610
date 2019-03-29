@@ -17,6 +17,7 @@
 - [randmat](randmat.md)
 - [randdommat](randdommat.md)
 - [randseed](randseed.md)
+- [randspdmat](randspdmat.md)
 - [randsymmat](randsymmat.md)
 - [randsymdommat](randsymdommat.md)
 - [randvec](randvec.md)

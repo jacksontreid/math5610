@@ -5,7 +5,7 @@
 - [x] [Task 1](#task-1)
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
-- [ ] [Task 4](#task-4)
+- [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
@@ -42,12 +42,15 @@ Use the LU factorization method you created in the previous step, along with the
 
 ### Task 4
 Write a code that will generate a symmetric, positive definite matrix for a given integer, n. Make sure that you add an entry to your software manual with a couple of examples. Your examples should be relatively small for your examples, but you should include a large example in the task solution write-up.
-- 
+- Code: [randspdmat.f90](randspdmat.f90)
+- Software Manual [entry](Software_Manual/randspdmat.md).
+- [large_spd_matrix.dat](large_spd_matrix.dat)
 
 ### Task 5
 Implement the Cholesky factorization method for square matrices. Do not include any pivoting in the algorithm. Document the algorithm in your software manual. Test the code on at least 2 or 3 matrices of different sizes. At least one example should involve a matrix that is bigger than 100×100 in size. Use output from the method you created in the previous task.
 - Code: [choldecomp.f90](choldecomp.f90)
 - Software Manual [entry](Software_Manual/choldecomp.md).
+- [large_cholesky_decomp.dat](large_cholesky_decomp.dat)
 
 ### Task 6
 Write a routine/method that will return an approximate solution of the least squares problem using the normal equation approach. Create an entry in your software manual for the method. Also, make sure you use the Cholesky algorithm that you created in a previous task.
