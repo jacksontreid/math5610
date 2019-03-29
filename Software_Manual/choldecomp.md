@@ -18,6 +18,8 @@
 
 ​        _A_ : REAL*8 -- an array of size (_n_,_n_) storing the decomposition in its lower triangle with the other values unchanged
 
+​       _error_ : INTEGER -- flag describing if decomposition was successful (0) or not (1)
+
 **Example Usage:** 
 
 ```
@@ -25,7 +27,7 @@
                & 12.0d0, 37.0d0, -43.0d0, &
               & -16.0d0, -43.0d0, 98.0d0/),(/3,3/),ORDER=(/2,1/))
     
-    CALL choldecomp(A,3)
+    CALL choldecomp(A,3,error)
     DO i = 1,3
         WRITE(*,*) A
     END DO
@@ -39,17 +41,19 @@ Output from the lines above:
 **Implementation:**
 
 ```
-SUBROUTINE choldecomp(A,n)
+SUBROUTINE choldecomp(A,n,error)
     IMPLICIT NONE
 
     INTEGER, INTENT(in) :: n
     REAL*8, INTENT(inout) :: A(n,n)
+    INTEGER, INTENT(out) :: error
     INTEGER :: i, j, k
 
     DO k = 1,n-1
         !Check for decomposition failure
         IF (A(k,k) <= 0.0d0) THEN
             WRITE(*,*) "Cholesky Decomposition FAILURE!"
+            error = 1
             RETURN
         END IF
         A(k,k) = SQRT(A(k,k))
@@ -68,9 +72,12 @@ SUBROUTINE choldecomp(A,n)
     !Check for decomposition failure
     IF (A(k,k) < 0.0d0) THEN
         WRITE(*,*) "Cholesky Decomposition FAILURE!"
+        error = 1
         RETURN
     END IF
     A(n,n) = SQRT(A(n,n))
+
+    error = 0
 
 END SUBROUTINE
 ```

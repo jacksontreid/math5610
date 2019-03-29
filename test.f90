@@ -364,10 +364,31 @@ WRITE(*,*) "   DIAGONAL"
     END DO
     WRITE(*,*)
 
-    CALL choldecomp(mat2,3)
+    CALL choldecomp(mat2,3,i)
     DO i = 1,3
         WRITE(*,*) mat2(i,:)
     END DO
+    WRITE(*,*)
+
+
+    WRITE(*,*) "   SYMMETRIC POSITIVE DEFINITE MATRIX"
+
+    CALL randspdmat(3,mat2)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+
+    ALLOCATE(matall1(100,100))
+    OPEN(10, FILE='out.dat', STATUS='new')
+    CALL randspdmat(100,matall1)
+    CALL choldecomp(matall1,100,i)
+    DO i = 1,100
+        WRITE(10,*) matall1(i,:)
+    END DO
+    WRITE(*,*)
+    CLOSE(10)
+    DEALLOCATE(matall1)
 
 
 END PROGRAM
