@@ -3,9 +3,9 @@ IMPLICIT NONE
 
 REAL :: snum
 REAL*8 :: num1, num2, num3, num4
-REAL*8 :: mat1(4,3), mat2(3,3), mat3(4,3), mat4(4,3), mat5(3,4)
+REAL*8 :: mat1(4,3), mat2(3,3), mat3(4,3), mat4(4,3), mat5(3,4), mat6(5,3)
 REAL*8, ALLOCATABLE :: matall1(:,:), vecall1(:), vecall2(:), vecall3(:)
-REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3)
+REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3), vec7(5)
 INTEGER :: i, n
 
 !Seed random number generator
@@ -379,16 +379,34 @@ WRITE(*,*) "   DIAGONAL"
     END DO
     WRITE(*,*)
 
-    ALLOCATE(matall1(100,100))
-    OPEN(10, FILE='out.dat', STATUS='new')
-    CALL randspdmat(100,matall1)
-    CALL choldecomp(matall1,100,i)
-    DO i = 1,100
-        WRITE(10,*) matall1(i,:)
+!    ALLOCATE(matall1(100,100))
+!    OPEN(10, FILE='out.dat', STATUS='new')
+!    CALL randspdmat(100,matall1)
+!    CALL choldecomp(matall1,100,i)
+!    DO i = 1,100
+!        WRITE(10,*) matall1(i,:)
+!    END DO
+!    WRITE(*,*)
+!    CLOSE(10)
+!    DEALLOCATE(matall1)
+
+    WRITE(*,*) "   LEAST SQUARES (NORMAL EQUATIONS)"
+    mat6 = RESHAPE((/1.0d0, 0.0d0, 1.0d0, &
+                   & 2.0d0, 3.0d0, 5.0d0, &
+                   & 5.0d0, 3.0d0, -2.0d0, &
+                   & 3.0d0, 5.0d0, 4.0d0, &
+                   & -1.0d0, 6.0d0, 3.0d0/),(/5,3/),ORDER=(/2,1/))
+    vec7 = (/ 4.0d0, -2.0d0, 5.0d0, -2.0d0, 1.0d0 /)
+    DO i = 1,5
+        WRITE(*,*) mat6(i,:)
     END DO
     WRITE(*,*)
-    CLOSE(10)
-    DEALLOCATE(matall1)
+    WRITE(*,*) vec7
+    WRITE(*,*)
+
+    CALL lsnormal(mat6,5,3,vec7,vec4)
+    WRITE(*,*) vec4
+    WRITE(*,*)
 
 
 END PROGRAM

@@ -44,6 +44,7 @@
 - [choldecomp](choldecomp.md)
 - [forsub](forsub.md)
 - [rowechelon](rowechelon.md)
+- [lsnormal](lsnormal.md)
 - [LUdecomp](LUdecomp.md)
 - [solvediagsys](solvediagsys.md)
 - [solvegausselim](solvegausselim.md)
@@ -58,5 +59,5 @@
 
 
 
-**Last Modified:** March/2019
+**Last Modified:** April/2019
 
