@@ -7,7 +7,7 @@
 - [x] [Task 3](#task-3)
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
-- [ ] [Task 6](#task-6)
+- [x] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
@@ -54,7 +54,8 @@ Implement the Cholesky factorization method for square matrices. Do not include 
 
 ### Task 6
 Write a routine/method that will return an approximate solution of the least squares problem using the normal equation approach. Create an entry in your software manual for the method. Also, make sure you use the Cholesky algorithm that you created in a previous task.
-- 
+- Code: [lsnormal.f90](lsnormal.f90)
+- Software Manual [entry](Software_Manual/lsnormal.md).
 
 ### Task 7
 Implement the QR factorization of a square matrix. Use the Gram-Schmidt process to create the orthogonal vectors for the orthogonal matrix. Document the method in your software manual. Include examples showing the orthogonal matrix and the other factor which should be upper triangular.
