@@ -4,6 +4,7 @@ IMPLICIT NONE
 REAL :: snum
 REAL*8 :: num1, num2, num3, num4
 REAL*8 :: mat1(4,3), mat2(3,3), mat3(4,3), mat4(4,3), mat5(3,4), mat6(5,3)
+REAL*8 :: mat7(3,3), mat8(3,3)
 REAL*8, ALLOCATABLE :: matall1(:,:), vecall1(:), vecall2(:), vecall3(:)
 REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3), vec7(5)
 INTEGER :: i, n
@@ -407,6 +408,27 @@ WRITE(*,*) "   DIAGONAL"
     CALL lsnormal(mat6,5,3,vec7,vec4)
     WRITE(*,*) vec4
     WRITE(*,*)
+
+    WRITE(*,*) "   QR DECOMPOSITION"
+    mat2 = RESHAPE((/12.0d0, -51.0d0, 4.0d0, &
+                   & 6.0d0, 167.0d0, -68.0d0, &
+                   & -4.0d0, 24.0d0, -41.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+
+    CALL QRdecomp(mat2,3,mat7,mat8)
+    WRITE(*,*) "Q = "
+    DO i = 1,3
+        WRITE(*,*) mat7(i,:)
+    END DO
+    WRITE(*,*) "R = "
+    DO i = 1,3
+        WRITE(*,*) mat8(i,:)
+    END DO
+
+
 
 
 END PROGRAM
