@@ -64,7 +64,51 @@ Implement the QR factorization of a square matrix. Use the Gram-Schmidt process 
 
 ### Task 8
 Try out your QR-factorization method from the previous task on the Hilbert matrices of sizes n=4,6,8,10. Test to see if the orthogonal matrix is really orthogonal by multiplying _Q_ by its transpose and comparing the result to the identity matrix. Explain the results you obtain.
-- 
+- The results of the multiplication _Q_^T*_Q_ are shown below. The results here are shown in scientific notation to emphasis the order of magnitude of each entry in the matrix, and displayed with few digits in order to fit on the page. The diagonals of each matrix are the same as the identity matrix (= 1.0) in every case, but the off-diagonal values increase in error as the size of the Hilbert matrix increases. In the case that n = 4, the result is very close to the identity matrix, signifying that _Q_ is very close to orthonormal.  However, the error increases to the point that, for n = 10, off-diagonal values exist at the same magnitude as the diagonal, clearly proving that _Q_ is not close to being orthonormal.
+- n = 4
+```
+  0.1E+01  0.5E-15 -0.5E-14  0.2E-12
+  0.5E-15  0.1E+01 -0.4E-13  0.1E-11
+ -0.5E-14 -0.4E-13  0.1E+01  0.4E-10
+  0.2E-12  0.1E-11  0.4E-10  0.1E+01
+```
+
+- n = 6
+```
+  0.1E+01 -0.2E-15  0.5E-14 -0.2E-12  0.4E-11  0.2E-09
+ -0.2E-15  0.1E+01  0.4E-14 -0.9E-13  0.3E-11 -0.2E-09
+  0.5E-14  0.4E-14  0.1E+01 -0.6E-11  0.2E-09 -0.6E-08
+ -0.2E-12 -0.9E-13 -0.6E-11  0.1E+01  0.1E-07 -0.7E-06
+  0.4E-11  0.3E-11  0.2E-09  0.1E-07  0.1E+01 -0.5E-04
+  0.2E-09 -0.2E-09 -0.6E-08 -0.7E-06 -0.5E-04  0.1E+01
+```
+
+- n = 8
+```
+  0.1E+01 -0.7E-15  0.7E-14 -0.1E-12  0.3E-11 -0.1E-09  0.6E-08 -0.6E-08
+ -0.7E-15  0.1E+01  0.4E-13 -0.5E-12  0.6E-11 -0.5E-10 -0.2E-08  0.2E-08
+  0.7E-14  0.4E-13  0.1E+01 -0.1E-10  0.3E-09 -0.6E-08  0.1E-06 -0.1E-06
+ -0.1E-12 -0.5E-12 -0.1E-10  0.1E+01  0.1E-07 -0.4E-06  0.1E-04 -0.1E-04
+  0.3E-11  0.6E-11  0.3E-09  0.1E-07  0.1E+01 -0.2E-04  0.2E-02 -0.2E-02
+ -0.1E-09 -0.5E-10 -0.6E-08 -0.4E-06 -0.2E-04  0.1E+01  0.1E+00 -0.1E+00
+  0.6E-08 -0.2E-08  0.1E-06  0.1E-04  0.2E-02  0.1E+00  0.1E+01 -0.1E+01
+ -0.6E-08  0.2E-08 -0.1E-06 -0.1E-04 -0.2E-02 -0.1E+00 -0.1E+01  0.1E+01
+```
+
+- n = 10
+```
+  0.1E+01  0.1E-14 -0.2E-13  0.2E-12 -0.3E-11  0.5E-10 -0.3E-09 -0.3E-09 -0.4E-09 -0.4E-09
+  0.1E-14  0.1E+01 -0.5E-13  0.6E-12 -0.6E-11  0.6E-10 -0.7E-09 -0.7E-09 -0.7E-09 -0.6E-09
+ -0.2E-13 -0.5E-13  0.1E+01  0.2E-10 -0.4E-09  0.6E-08 -0.8E-07 -0.8E-07 -0.7E-07 -0.7E-07
+  0.2E-12  0.6E-12  0.2E-10  0.1E+01 -0.1E-07  0.4E-06 -0.9E-05 -0.8E-05 -0.7E-05 -0.7E-05
+ -0.3E-11 -0.6E-11 -0.4E-09 -0.1E-07  0.1E+01  0.2E-04 -0.8E-03 -0.7E-03 -0.7E-03 -0.6E-03
+  0.5E-10  0.6E-10  0.6E-08  0.4E-06  0.2E-04  0.1E+01 -0.5E-01 -0.4E-01 -0.4E-01 -0.3E-01
+ -0.3E-09 -0.7E-09 -0.8E-07 -0.9E-05 -0.8E-03 -0.5E-01  0.1E+01  0.1E+01  0.1E+01  0.1E+01
+ -0.3E-09 -0.7E-09 -0.8E-07 -0.8E-05 -0.7E-03 -0.4E-01  0.1E+01  0.1E+01  0.1E+01  0.1E+01
+ -0.4E-09 -0.7E-09 -0.7E-07 -0.7E-05 -0.7E-03 -0.4E-01  0.1E+01  0.1E+01  0.1E+01  0.1E+01
+ -0.4E-09 -0.6E-09 -0.7E-07 -0.7E-05 -0.6E-03 -0.3E-01  0.1E+01  0.1E+01  0.1E+01  0.1E+01
+```
+
 
 ### Task 9
 Implement a method that will return a square diagonally dominant matrix. Document this method in your software manual.

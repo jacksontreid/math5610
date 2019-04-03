@@ -5,9 +5,11 @@ REAL :: snum
 REAL*8 :: num1, num2, num3, num4
 REAL*8 :: mat1(4,3), mat2(3,3), mat3(4,3), mat4(4,3), mat5(3,4), mat6(5,3)
 REAL*8 :: mat7(3,3), mat8(3,3)
-REAL*8, ALLOCATABLE :: matall1(:,:), vecall1(:), vecall2(:), vecall3(:)
+REAL*8, ALLOCATABLE :: matall1(:,:), matall2(:,:), matall3(:,:)
+REAL*8, ALLOCATABLE :: vecall1(:), vecall2(:), vecall3(:)
 REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3), vec7(5)
-INTEGER :: i, n
+INTEGER :: i, j, k, n
+CHARACTER :: wrt_fmt(20)
 
 !Seed random number generator
 CALL randseed()
@@ -427,7 +429,31 @@ WRITE(*,*) "   DIAGONAL"
     DO i = 1,3
         WRITE(*,*) mat8(i,:)
     END DO
+    WRITE(*,*)
 
+    !Test QR factorization of Hilbert Matrices
+    DO i = 4,10,2
+        WRITE(*,*) i
+        ALLOCATE(matall1(i,i),matall2(i,i),matall3(i,i))
+
+        DO j = 1,i
+            DO k = j,i
+                matall1(j,k) = 1.0d0/DBLE(j+k-1)
+                matall1(k,j) = matall1(j,k)
+            END DO
+        END DO
+
+        CALL QRdecomp(matall1,i,matall2,matall3)
+
+        CALL multmat(TRANSPOSE(matall2),matall2,i,i,i,matall3)
+
+        DO j = 1,i
+            WRITE(*,'(*(E12.4))') matall3(j,:)
+        END DO
+        WRITE(*,*)
+
+        DEALLOCATE(matall1,matall2,matall3)
+    END DO
 
 
 
