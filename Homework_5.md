@@ -9,8 +9,8 @@
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
-- [ ] [Task 8](#task-8)
-- [ ] [Task 9](#task-9)
+- [x] [Task 8](#task-8)
+- [x] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
 ### Task 1
@@ -112,7 +112,8 @@ Try out your QR-factorization method from the previous task on the Hilbert matri
 
 ### Task 9
 Implement a method that will return a square diagonally dominant matrix. Document this method in your software manual.
-- 
+- Code: [randdommat.f90](randdommat.f90)
+- Software Manual [entry](Software_Manual/randdommat.md).
 
 ### Task 10
 Search the internet for sites that discuss the use of direct methods for the approximate solution of linear systems of systems of equations. Note that direct methods include factorization methods and the standard Gaussian eliimination with back substitution. Find at least a couple of sites where limitations of direct methods are discussed. As usual, cite your sites.
