@@ -11,6 +11,7 @@
 - [Homework #3](Homework_3.md)
 - [Homework #4](Homework_4.md)
 - [Homework #5](Homework_5.md)
+- [Homework #6](Homework_6.md)
 
 
 
