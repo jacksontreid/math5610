@@ -432,28 +432,28 @@ WRITE(*,*) "   DIAGONAL"
     WRITE(*,*)
 
     !Test QR factorization of Hilbert Matrices
-    DO i = 4,10,2
-        WRITE(*,*) i
-        ALLOCATE(matall1(i,i),matall2(i,i),matall3(i,i))
+!    DO i = 4,10,2
+!        WRITE(*,*) i
+!        ALLOCATE(matall1(i,i),matall2(i,i),matall3(i,i))
 
-        DO j = 1,i
-            DO k = j,i
-                matall1(j,k) = 1.0d0/DBLE(j+k-1)
-                matall1(k,j) = matall1(j,k)
-            END DO
-        END DO
+!        DO j = 1,i
+!            DO k = j,i
+!                matall1(j,k) = 1.0d0/DBLE(j+k-1)
+!                matall1(k,j) = matall1(j,k)
+!            END DO
+!        END DO
 
-        CALL QRdecomp(matall1,i,matall2,matall3)
+!        CALL QRdecomp(matall1,i,matall2,matall3)
 
-        CALL multmat(TRANSPOSE(matall2),matall2,i,i,i,matall3)
+!        CALL multmat(TRANSPOSE(matall2),matall2,i,i,i,matall3)
 
-        DO j = 1,i
-            WRITE(*,'(*(E12.4))') matall3(j,:)
-        END DO
-        WRITE(*,*)
+!        DO j = 1,i
+!            WRITE(*,'(*(E12.4))') matall3(j,:)
+!        END DO
+!        WRITE(*,*)
 
-        DEALLOCATE(matall1,matall2,matall3)
-    END DO
+!        DEALLOCATE(matall1,matall2,matall3)
+!    END DO
 
 
 

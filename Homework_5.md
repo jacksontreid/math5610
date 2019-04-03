@@ -116,8 +116,10 @@ Implement a method that will return a square diagonally dominant matrix. Documen
 - Software Manual [entry](Software_Manual/randdommat.md).
 
 ### Task 10
-Search the internet for sites that discuss the use of direct methods for the approximate solution of linear systems of systems of equations. Note that direct methods include factorization methods and the standard Gaussian eliimination with back substitution. Find at least a couple of sites where limitations of direct methods are discussed. As usual, cite your sites.
+Search the internet for sites that discuss the use of direct methods for the approximate solution of linear systems of systems of equations. Note that direct methods include factorization methods and the standard Gaussian elimination with back substitution. Find at least a couple of sites where limitations of direct methods are discussed. As usual, cite your sites.
 
-- > 
+- > Direct methods are methods of solving linear systems that theoretically will produce the exact solution in a finite number of operations. In reality, round-off error plays a major roll in the accuracy of the solution, and the number of operations required, though finite, may be computationally too expensive. Thus, there exist many methods that set out to minimize the effect of round-off error and attempt to reduce the number of operations required. 
   >
-  > - 
+  > - https://www.math.ust.hk/~mamu/courses/231/Slides/CH06_1A.pdf
+  > - https://people.eecs.berkeley.edu/~newton/Classes/EE219fa98/ee219a2_2/ee219a2_2.pdf
+  > - https://www.researchgate.net/post/what_is_the_best_method_for_solving_system_of_linear_equations
