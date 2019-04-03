@@ -8,7 +8,7 @@
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
-- [ ] [Task 7](#task-7)
+- [x] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
@@ -59,7 +59,8 @@ Write a routine/method that will return an approximate solution of the least squ
 
 ### Task 7
 Implement the QR factorization of a square matrix. Use the Gram-Schmidt process to create the orthogonal vectors for the orthogonal matrix. Document the method in your software manual. Include examples showing the orthogonal matrix and the other factor which should be upper triangular.
-- 
+- Code: [QRdecomp.f90](QRdecomp.f90)
+- Software Manual [entry](Software_Manual/QRdecomp.md).
 
 ### Task 8
 Try out your QR-factorization method from the previous task on the Hilbert matrices of sizes n=4,6,8,10. Test to see if the orthogonal matrix is really orthogonal by multiplying _Q_ by its transpose and comparing the result to the identity matrix. Explain the results you obtain.

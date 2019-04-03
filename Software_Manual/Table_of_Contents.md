@@ -46,6 +46,7 @@
 - [rowechelon](rowechelon.md)
 - [lsnormal](lsnormal.md)
 - [LUdecomp](LUdecomp.md)
+- [QRdecomp](QRdecomp.md)
 - [solvediagsys](solvediagsys.md)
 - [solvegausselim](solvegausselim.md)
 - [solvegausselim2](solvegausselim2.md)
