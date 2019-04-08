@@ -1,6 +1,6 @@
 # MATH 5610 Software Manual
 
-### Subroutine: [_QRdecomp_](../QRdecomp.f90)
+### Subroutine: [_QRdecompmod_](../QRdecompmod.f90)
 
 **Author:** Jackson Reid
 
