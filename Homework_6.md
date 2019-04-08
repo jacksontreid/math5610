@@ -36,6 +36,7 @@ Create another version of the QR-factorization algorithm using the Modified Gram
  -0.6E-08  0.2E-08 -0.1E-06 -0.1E-04 -0.2E-02 -0.1E+00 -0.1E+01  0.1E+01
 ```
 - Modified Gram-Schmidt (Q^T*Q, Hilbert n = 8)
+
 ```
   0.1E+01 -0.7E-15  0.6E-14 -0.1E-12  0.3E-11 -0.1E-09  0.6E-08 -0.4E-06
  -0.7E-15  0.1E+01  0.4E-14 -0.3E-13 -0.3E-12  0.4E-10 -0.3E-08  0.3E-06
@@ -50,7 +51,6 @@ Create another version of the QR-factorization algorithm using the Modified Gram
 > The modified Gram-Schmidt algorithm produces a _Q_ matrix that is much closer to being orthonormal than the classical algorithm.
 
 ### Task 3
-
 Create a third version of the QR-factorization algorithm using Householder Transformations. As usual, document you code in your software manual. Use the third incarnation of the code on the same matrices as the previous two QR-factorization and compare/explain your results.
 - 
 

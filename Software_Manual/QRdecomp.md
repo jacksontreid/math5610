@@ -6,7 +6,7 @@
 
 **Language:** Fortran. The code can be [compiled](compilation.md) using the GNU Fortran compiler (gfortran).
 
-**Description:** This routine will calculate the QR decomposition of a matrix. The decomposition produces an orthonormal matrix, _Q_, and an upper triangular matrix, _R_. The product of these two matrices is the original matrix. 
+**Description:** This routine will calculate the QR decomposition of a matrix, using classical Gram-Schmidt. The decomposition produces an orthonormal matrix, _Q_, and an upper triangular matrix, _R_. The product of these two matrices is the original matrix. 
 
 **Inputs:** 
 
