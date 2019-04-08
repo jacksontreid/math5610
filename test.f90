@@ -431,6 +431,26 @@ WRITE(*,*) "   DIAGONAL"
     END DO
     WRITE(*,*)
 
+    WRITE(*,*) "   QR DECOMPOSITION MOD"
+    mat2 = RESHAPE((/12.0d0, -51.0d0, 4.0d0, &
+                   & 6.0d0, 167.0d0, -68.0d0, &
+                   & -4.0d0, 24.0d0, -41.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+
+    CALL QRdecompmod(mat2,3,mat7,mat8)
+    WRITE(*,*) "Q = "
+    DO i = 1,3
+        WRITE(*,*) mat7(i,:)
+    END DO
+    WRITE(*,*) "R = "
+    DO i = 1,3
+        WRITE(*,*) mat8(i,:)
+    END DO
+    WRITE(*,*)
+
     !Test QR factorization of Hilbert Matrices
 !    DO i = 4,10,2
 !        WRITE(*,*) i
@@ -443,18 +463,34 @@ WRITE(*,*) "   DIAGONAL"
 !            END DO
 !        END DO
 
-!        CALL QRdecomp(matall1,i,matall2,matall3)
+!        CALL QRdecompmod(matall1,i,matall2,matall3)
 
 !        CALL multmat(TRANSPOSE(matall2),matall2,i,i,i,matall3)
 
 !        DO j = 1,i
-!            WRITE(*,'(*(E12.4))') matall3(j,:)
+!            WRITE(*,'(*(E9.1))') matall3(j,:)
 !        END DO
 !        WRITE(*,*)
 
 !        DEALLOCATE(matall1,matall2,matall3)
 !    END DO
 
+    WRITE(*,*)
+    WRITE(*,*) "   SOLVE QR DECOMPOSITION"
+    mat2 = RESHAPE((/0.4d0, 0.6d0, 1.9d0, &
+                   & 0.6d0, 0.4d0, 0.1d0, &
+                   & 1.9d0, 0.1d0, 1.0d0/),(/3,3/),ORDER=(/2,1/))
+    vec4 = (/ 0.2d0, 0.4d0, 0.1d0 /)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec4
+    WRITE(*,*)
+
+    CALL solveQRfactor(mat2,3,vec4,vec5)
+    WRITE(*,*) vec5
+    WRITE(*,*)
 
 
 END PROGRAM
