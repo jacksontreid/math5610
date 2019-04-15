@@ -47,6 +47,7 @@
 - [lsnormal](lsnormal.md)
 - [LUdecomp](LUdecomp.md)
 - [QRdecomp](QRdecomp.md)
+- [QRdecomphouse](QRdecomphouse.md)
 - [QRdecompmod](QRdecompmod.md)
 - [solvediagsys](solvediagsys.md)
 - [solvegausselim](solvegausselim.md)
