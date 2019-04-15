@@ -13,7 +13,7 @@ SUBROUTINE solveQRfactor(A,n,b,x)
     INTEGER :: i
 
     !Perform QR-decomposition on the matrix
-    CALL QRdecompmod(A,n,Q,R)
+    CALL QRdecomphouse(A,n,Q,R)
 
     !Use matrix-vector multiplication to modify the right-hand side
     CALL multmat(TRANSPOSE(Q),b,n,n,1,y)
