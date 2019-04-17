@@ -4,10 +4,10 @@ IMPLICIT NONE
 REAL :: snum
 REAL*8 :: num1, num2, num3, num4
 REAL*8 :: mat1(4,3), mat2(3,3), mat3(4,3), mat4(4,3), mat5(3,4), mat6(5,3)
-REAL*8 :: mat7(3,3), mat8(3,3)
+REAL*8 :: mat7(3,3), mat8(3,3), mat9(3,2)
 REAL*8, ALLOCATABLE :: matall1(:,:), matall2(:,:), matall3(:,:)
 REAL*8, ALLOCATABLE :: vecall1(:), vecall2(:), vecall3(:)
-REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3), vec7(5)
+REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3), vec7(5), vec8(2)
 INTEGER :: i, j, k, n
 CHARACTER :: wrt_fmt(20)
 
@@ -420,7 +420,7 @@ WRITE(*,*) "   DIAGONAL"
     END DO
     WRITE(*,*)
 
-    CALL QRdecomp(mat2,3,mat7,mat8)
+    CALL QRdecomp(mat2,3,3,mat7,mat8)
     WRITE(*,*) "Q = "
     DO i = 1,3
         WRITE(*,*) mat7(i,:)
@@ -440,7 +440,7 @@ WRITE(*,*) "   DIAGONAL"
     END DO
     WRITE(*,*)
 
-    CALL QRdecompmod(mat2,3,mat7,mat8)
+    CALL QRdecompmod(mat2,3,3,mat7,mat8)
     WRITE(*,*) "Q = "
     DO i = 1,3
         WRITE(*,*) mat7(i,:)
@@ -460,7 +460,7 @@ WRITE(*,*) "   DIAGONAL"
     END DO
     WRITE(*,*)
 
-    CALL QRdecomphouse(mat2,3,mat7,mat8)
+    CALL QRdecomphouse(mat2,3,3,mat7,mat8)
     WRITE(*,*) "Q = "
     DO i = 1,3
         WRITE(*,*) mat7(i,:)
@@ -511,6 +511,43 @@ WRITE(*,*) "   DIAGONAL"
     CALL solveQRfactor(mat2,3,vec4,vec5)
     WRITE(*,*) vec5
     WRITE(*,*)
+
+    WRITE(*,*) "   LEAST SQUARES (QR GSmod)"
+    mat6 = RESHAPE((/1.0d0, 0.0d0, 1.0d0, &
+                   & 2.0d0, 3.0d0, 5.0d0, &
+                   & 5.0d0, 3.0d0, -2.0d0, &
+                   & 3.0d0, 5.0d0, 4.0d0, &
+                   & -1.0d0, 6.0d0, 3.0d0/),(/5,3/),ORDER=(/2,1/))
+    vec7 = (/ 4.0d0, -2.0d0, 5.0d0, -2.0d0, 1.0d0 /)
+    DO i = 1,5
+        WRITE(*,*) mat6(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec7
+    WRITE(*,*)
+
+    CALL lsQRgsmod(mat6,5,3,vec7,vec4)
+    WRITE(*,*) vec4
+    WRITE(*,*)
+
+     WRITE(*,*) "   LEAST SQUARES (QR Householder)"
+    mat6 = RESHAPE((/1.0d0, 0.0d0, 1.0d0, &
+                   & 2.0d0, 3.0d0, 5.0d0, &
+                   & 5.0d0, 3.0d0, -2.0d0, &
+                   & 3.0d0, 5.0d0, 4.0d0, &
+                   & -1.0d0, 6.0d0, 3.0d0/),(/5,3/),ORDER=(/2,1/))
+    vec7 = (/ 4.0d0, -2.0d0, 5.0d0, -2.0d0, 1.0d0 /)
+    DO i = 1,5
+        WRITE(*,*) mat6(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec7
+    WRITE(*,*)
+
+    CALL lsQRhouse(mat6,5,3,vec7,vec4)
+    WRITE(*,*) vec4
+    WRITE(*,*)
+
 
 
 END PROGRAM

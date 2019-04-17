@@ -2,12 +2,12 @@
 !@author: Jackson Reid
 
 
-SUBROUTINE QRdecompmod(A,n,Q,R)
+SUBROUTINE QRdecompmod(A,m,n,Q,R)
     IMPLICIT NONE
 
-    INTEGER, INTENT(in) :: n
-    REAL*8, INTENT(in) :: A(n,n)
-    REAL*8, INTENT(out) :: Q(n,n), R(n,n)
+    INTEGER, INTENT(in) :: m, n
+    REAL*8, INTENT(in) :: A(m,n)
+    REAL*8, INTENT(out) :: Q(m,n), R(n,n)
     REAL*8 :: factor
     INTEGER :: i, j
 
@@ -16,10 +16,10 @@ SUBROUTINE QRdecompmod(A,n,Q,R)
     DO j = 1,n
         Q(:,j) = A(:,j)
         DO i = 1,j-1
-            CALL dotvec(Q(:,j),Q(:,i),n,R(i,j))
+            CALL dotvec(Q(:,j),Q(:,i),m,R(i,j))
             Q(:,j) = Q(:,j) - R(i,j)*Q(:,i)
         END DO
-        CALL norm2vec(Q(:,j),n,R(j,j))
+        CALL norm2vec(Q(:,j),m,R(j,j))
         Q(:,j) = Q(:,j)/R(j,j)
     END DO
 

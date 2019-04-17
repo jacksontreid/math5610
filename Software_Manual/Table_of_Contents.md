@@ -45,6 +45,8 @@
 - [forsub](forsub.md)
 - [rowechelon](rowechelon.md)
 - [lsnormal](lsnormal.md)
+- [lsQRgsmod](lsQRgsmod.md)
+- [lsQRhouse](lsQRhouse.md)
 - [LUdecomp](LUdecomp.md)
 - [QRdecomp](QRdecomp.md)
 - [QRdecomphouse](QRdecomphouse.md)

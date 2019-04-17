@@ -10,13 +10,15 @@
 
 **Inputs:** 
 
-​        _A_ : REAL*8 -- an array of size (_n_,_n_) 
+​        _A_ : REAL*8 -- an array of size (_m_,_n_) 
 
-​	_n_ : INTEGER -- the size of matrix _A_ 
+​        _m_ : INTEGER -- the number of rows in matrix _A_ 
+
+​	_n_ : INTEGER -- the number of columns in matrix _A_ 
 
 **Outputs:** 
 
-​        _Q_ : REAL*8 -- an array of size (_n_,_n_), containing the orthonormal matrix
+​        _Q_ : REAL*8 -- an array of size (_m_,_n_), containing the orthonormal matrix
 
 ​        _R_ : REAL*8 -- an array of size (_n_,_n_), containing the upper triangular matrix
 
@@ -27,7 +29,7 @@
                  & 6.0d0, 167.0d0, -68.0d0, &
                 & -4.0d0, 24.0d0, -41.0d0/),(/3,3/),ORDER=(/2,1/))
     
-    CALL QRdecomp(A,3,Q,R)
+    CALL QRdecomp(A,3,3,Q,R)
     WRITE(*,*) "Q = "
     DO i = 1,3
         WRITE(*,*) Q(i,:)
@@ -51,12 +53,12 @@ Output from the lines above:
 **Implementation:**
 
 ```
-SUBROUTINE QRdecomp(A,n,Q,R)
+SUBROUTINE QRdecomp(A,m,n,Q,R)
     IMPLICIT NONE
 
-    INTEGER, INTENT(in) :: n
-    REAL*8, INTENT(in) :: A(n,n)
-    REAL*8, INTENT(out) :: Q(n,n), R(n,n)
+    INTEGER, INTENT(in) :: m, n
+    REAL*8, INTENT(in) :: A(m,n)
+    REAL*8, INTENT(out) :: Q(m,n), R(n,n)
     REAL*8 :: factor
     INTEGER :: i, j
 
@@ -65,10 +67,10 @@ SUBROUTINE QRdecomp(A,n,Q,R)
     DO j = 1,n
         Q(:,j) = A(:,j)
         DO i = 1,j-1
-            CALL dotvec(A(:,j),Q(:,i),n,R(i,j))
+            CALL dotvec(A(:,j),Q(:,i),m,R(i,j))
             Q(:,j) = Q(:,j) - R(i,j)*Q(:,i)
         END DO
-        CALL norm2vec(Q(:,j),n,R(j,j))
+        CALL norm2vec(Q(:,j),m,R(j,j))
         Q(:,j) = Q(:,j)/R(j,j)
     END DO
 
