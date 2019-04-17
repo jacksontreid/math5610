@@ -5,8 +5,8 @@
 - [x] [Task 1](#task-1)
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
-- [ ] [Task 4](#task-4)
-- [ ] [Task 5](#task-5)
+- [x] [Task 4](#task-4)
+- [x] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
@@ -68,12 +68,14 @@ Create a third version of the QR-factorization algorithm using Householder Trans
 > Using Householder transformations produces a _Q_ matrix that is orthogonal to machine precision for the Hilbert 8x8 matrix! This is a huge improvement over the Gram-Schmidt algorithms.
 
 ### Task 4
-Build a code that will solve the least squares problem using QR factorization. Document the code in your software manual.
-- 
+Build a code that will solve the least squares problem using QR factorization. Document the code in your software manual. Use the modified Gram-Schmidt algorithm to compute the QR factorization.
+- Code: [lsQRgsmod.f90](lsQRgsmod.f90)
+- Software Manual [entry](Software_Manual/lsQRgsmod.md).
 
 ### Task 5
 Build a code that will solve the least squares problem using QR factorization. Document the code in your software manual.
-- 
+- Code: [lsQRhouse.f90](lsQRhouse.f90)
+- Software Manual [entry](Software_Manual/lsQRhouse.md).
 
 ### Task 6
 Implement the Jacobi Iteration algorithm for computing a sequence of approximate solutions for the linear system equations, _A_ _x_=_b_ . Include a software manual entry for the code you write. Include at least one example that solves a system of equations with 1000 equations in 1000 unknowns. You can use the code you developed to create a diagonally dominant system.
