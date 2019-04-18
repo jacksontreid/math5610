@@ -54,6 +54,7 @@
 - [solvediagsys](solvediagsys.md)
 - [solvegausselim](solvegausselim.md)
 - [solvegausselim2](solvegausselim2.md)
+- [solvejacobi](solvejacobi.md)
 - [solveLUfactor](solveLUfactor.md)
 - [solveQRfactor](solveQRfactor.md)
 

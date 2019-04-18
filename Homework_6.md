@@ -7,7 +7,7 @@
 - [x] [Task 3](#task-3)
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
-- [ ] [Task 6](#task-6)
+- [x] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
@@ -79,7 +79,8 @@ Build a code that will solve the least squares problem using QR factorization. D
 
 ### Task 6
 Implement the Jacobi Iteration algorithm for computing a sequence of approximate solutions for the linear system equations, _A_ _x_=_b_ . Include a software manual entry for the code you write. Include at least one example that solves a system of equations with 1000 equations in 1000 unknowns. You can use the code you developed to create a diagonally dominant system.
-- 
+- Code: [solvejacobi.f90](solvejacobi.f90)
+- Software Manual [entry](Software_Manual/solvejacobi.md).
 
 ### Task 7
 Repeat the previous task using the Gauss-Seidel algorithm.
