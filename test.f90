@@ -548,6 +548,24 @@ WRITE(*,*) "   DIAGONAL"
     WRITE(*,*) vec4
     WRITE(*,*)
 
+    WRITE(*,*) "   SOLVE JACOBI"
+    mat2 = RESHAPE((/3.0d0, -1.0d0, 1.0d0, &
+                   & 1.0d0, -4.0d0, 1.0d0, &
+                   & 1.0d0, 2.0d0, -6.0d0/),(/3,3/),ORDER=(/2,1/))
+    vec4 = (/ 2.0d0, -0.0d0, 1.0d0 /)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec4
+    WRITE(*,*)
+
+    vec5 = (/ 0.1d0, 0.1d0, 0.1d0 /)
+
+    CALL solvejacobi(mat2,3,vec4,vec5,10.d-16,100,.TRUE.,vec6)
+    WRITE(*,*) vec6
+    WRITE(*,*)
+
 
 
 END PROGRAM
