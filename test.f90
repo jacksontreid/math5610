@@ -562,9 +562,39 @@ WRITE(*,*) "   DIAGONAL"
 
     vec5 = (/ 0.1d0, 0.1d0, 0.1d0 /)
 
-    CALL solvejacobi(mat2,3,vec4,vec5,10.d-16,100,.TRUE.,vec6)
+    CALL solvejacobi(mat2,3,vec4,vec5,10.d-16,100,.False.,vec6)
     WRITE(*,*) vec6
     WRITE(*,*)
+
+    WRITE(*,*) "   SOLVE GAUSS-SEIDEL"
+    mat2 = RESHAPE((/3.0d0, -1.0d0, 1.0d0, &
+                   & 1.0d0, -4.0d0, 1.0d0, &
+                   & 1.0d0, 2.0d0, -6.0d0/),(/3,3/),ORDER=(/2,1/))
+    vec4 = (/ 2.0d0, -0.0d0, 1.0d0 /)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec4
+    WRITE(*,*)
+
+    vec5 = (/ 0.1d0, 0.1d0, 0.1d0 /)
+
+    CALL solvegaussseidel(mat2,3,vec4,vec5,10.d-16,100,.False.,vec6)
+    WRITE(*,*) vec6
+    WRITE(*,*)
+
+
+    !    ALLOCATE(matall1(100,100))
+!    OPEN(10, FILE='out.dat', STATUS='new')
+!    CALL randspdmat(100,matall1)
+!    CALL choldecomp(matall1,100,i)
+!    DO i = 1,100
+!        WRITE(10,*) matall1(i,:)
+!    END DO
+!    WRITE(*,*)
+!    CLOSE(10)
+!    DEALLOCATE(matall1)
 
 
 

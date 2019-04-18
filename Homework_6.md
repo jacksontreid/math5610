@@ -8,7 +8,7 @@
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
-- [ ] [Task 7](#task-7)
+- [x] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
@@ -84,7 +84,8 @@ Implement the Jacobi Iteration algorithm for computing a sequence of approximate
 
 ### Task 7
 Repeat the previous task using the Gauss-Seidel algorithm.
-- 
+- Code: [solvegaussseidel.f90](solvegaussseidel.f90)
+- Software Manual [entry](Software_Manual/solvegaussseidel.md).
 
 ### Task 8
 Compare the Jacobi and Gauss-Seidel in terms of the number of iterations needed to converge to a given tolerance. For example, compute the number of iterations needed to produce a solution to within four digits of accuracy. Tabulate and/or plot the number of iterations needed for the two methods as the size of the system changes. Do this for large systems of equations - greater than 500 by 500.
