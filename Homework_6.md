@@ -10,8 +10,8 @@
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
-- [ ] [Task 9](#task-9)
-- [ ] [Task 10](#task-10)
+- [x] [Task 9](#task-9)
+- [x] [Task 10](#task-10)
 
 ### Task 1
 Implement a method that will compute the solution of a square linear system of equations using the QR-factorization of the matrix. Give examples and document the code in your software manual.
@@ -113,6 +113,6 @@ Do an internet search for pages that discuss the difference between the solution
 
 ### Task 10
 Complete an internet search for sites that discuss the stability of various algorithms used in computing the QR factorization of both rectangular and square matrices. Give a brief description of what you found and include citations for the pages you find.
-- > 
+- > There are two main approaches of QR factorization algorithms: first, successively multiplying _A_ by upper-triangular matrices, to obtain an orthonormal matrix, _Q_, then inverting the triangular matrices to obtain _R_; second, successively multiplying _A_ by orthonormal matrices, to obtain an upper-triangular matrix, _R_, then inverting the orthogonal matrices to obtain _Q_. The first method is applied in the Gram-Schmidt and modified Gram-Schmidt algorithms, and the second method is applied in the algorithms employing Housholder transformations and Givens rotations. The advantage that the Householder and Givens algorithms has is due to the stability of orthogonal matrices. Orthogonal matrices have a condition number of one, so, error amplification does not occur in the successive multiplication and inversion process used in the second category of algorithms. The upper triangular matrices used in the first set of algorithms, however, have condition numbers on the order of that of the original matrix, thus, these algorithms have the propensity to amplify error throughout the algorithm if the original matrix is poorly conditioned.
   >
-  > - 
+  > - https://www-old.math.gatech.edu/academic/courses/core/math2601/Web-notes/3num.pdf
