@@ -6,7 +6,7 @@ REAL*8 :: num1, num2, num3, num4
 REAL*8 :: mat1(4,3), mat2(3,3), mat3(4,3), mat4(4,3), mat5(3,4), mat6(5,3)
 REAL*8 :: mat7(3,3), mat8(3,3), mat9(3,2)
 REAL*8, ALLOCATABLE :: matall1(:,:), matall2(:,:), matall3(:,:)
-REAL*8, ALLOCATABLE :: vecall1(:), vecall2(:), vecall3(:)
+REAL*8, ALLOCATABLE :: vecall1(:), vecall2(:), vecall3(:), vecall4(:)
 REAL*8 :: vec1(4), vec2(4), vec3(4), vec4(3), vec5(3), vec6(3), vec7(5), vec8(2)
 INTEGER :: i, j, k, n
 CHARACTER :: wrt_fmt(20)
@@ -584,17 +584,33 @@ WRITE(*,*) "   DIAGONAL"
     WRITE(*,*) vec6
     WRITE(*,*)
 
+!    WRITE(*,*) "   ITERATION METHODS ITERATION TEST"
+!    DO i = 1,4
+!        n = 10.d0**i
+!        ALLOCATE(matall1(n,n),vecall1(n),vecall2(n),vecall3(n),vecall4(n))
 
-    !    ALLOCATE(matall1(100,100))
-!    OPEN(10, FILE='out.dat', STATUS='new')
-!    CALL randspdmat(100,matall1)
-!    CALL choldecomp(matall1,100,i)
-!    DO i = 1,100
-!        WRITE(10,*) matall1(i,:)
+!        vecall1 = 1.0d0
+
+!        CALL randdommat(n,matall1)
+
+!        CALL multmat(matall1,vecall1,n,n,1,vecall2)
+
+!        WRITE(*,*) n
+
+!        vecall3 = 0.1d0
+
+!        CALL solvejacobi(matall1,n,vecall2,vecall3,10.d-10,100,.TRUE.,vecall4)
+
+!        CALL norm2abserr(vecall4, vecall1, n, num1)
+!        WRITE(*,*) num1
+
+!        CALL solvegaussseidel(matall1,n,vecall2,vecall3,10.d-10,100,.TRUE.,vecall4)
+
+!        CALL norm2abserr(vecall4, vecall1, n, num1)
+!        WRITE(*,*) num1
+
+!        DEALLOCATE(matall1,vecall1,vecall2,vecall3,vecall4)
 !    END DO
-!    WRITE(*,*)
-!    CLOSE(10)
-!    DEALLOCATE(matall1)
 
 
 

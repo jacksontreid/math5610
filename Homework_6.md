@@ -80,16 +80,29 @@ Build a code that will solve the least squares problem using QR factorization. D
 ### Task 6
 Implement the Jacobi Iteration algorithm for computing a sequence of approximate solutions for the linear system equations, _A_ _x_=_b_ . Include a software manual entry for the code you write. Include at least one example that solves a system of equations with 1000 equations in 1000 unknowns. You can use the code you developed to create a diagonally dominant system.
 - Code: [solvejacobi.f90](solvejacobi.f90)
+
 - Software Manual [entry](Software_Manual/solvejacobi.md).
+
+  > See Task 8 for large system result
 
 ### Task 7
 Repeat the previous task using the Gauss-Seidel algorithm.
 - Code: [solvegaussseidel.f90](solvegaussseidel.f90)
+
 - Software Manual [entry](Software_Manual/solvegaussseidel.md).
+
+  > See Task 8 for large system result
 
 ### Task 8
 Compare the Jacobi and Gauss-Seidel in terms of the number of iterations needed to converge to a given tolerance. For example, compute the number of iterations needed to produce a solution to within four digits of accuracy. Tabulate and/or plot the number of iterations needed for the two methods as the size of the system changes. Do this for large systems of equations - greater than 500 by 500.
-- 
+- For the system _A_ _x_ = _b_ -- where _A_ is a random, diagonally-dominant matrix and _b_ is generated from the known solution _x_ = [1.0] -- the solution is calculated within a tolerance of 10E-10.
+|   n    | Jacobi Iter. |      Jacobi Error       | GS Iter. |        GS Error         |
+| :----: | :----------: | :---------------------: | :------: | :---------------------: |
+|   10   |      46      | 2.9589071957989963E-010 |    13    | 1.2124514010849118E-010 |
+|  100   |      63      | 3.5940887506048294E-010 |    14    | 5.5617615886132428E-011 |
+| 1,000  |      68      | 3.9336334230202365E-010 |    15    | 2.2027483520222965E-011 |
+| 10,000 |      72      | 3.1469510181285337E-010 |    15    | 7.1753017680488300E-011 |
+
 
 
 ### Task 9
