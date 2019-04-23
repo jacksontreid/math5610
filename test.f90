@@ -612,6 +612,41 @@ WRITE(*,*) "   DIAGONAL"
 !        DEALLOCATE(matall1,vecall1,vecall2,vecall3,vecall4)
 !    END DO
 
+!    WRITE(*,*) "   GAUSS-SEIDEL VS GAUSSIAN ELIMINATION TIME TEST"
+
+!    DO i = 1,4
+!        n = 10**i
+!        ALLOCATE(matall1(n,n),vecall1(n),vecall2(n),vecall3(n),vecall4(n))
+
+!        vecall1 = 1.0d0
+
+!        CALL randdommat(n,matall1)
+
+!        CALL multmat(matall1,vecall1,n,n,1,vecall2)
+
+!        WRITE(*,*) n
+
+!        vecall3 = 0.1d0
+
+!        CALL CPU_TIME(num1)
+!        CALL solvegaussseidel(matall1,n,vecall2,vecall3,10.d-15,150,.TRUE.,vecall4)
+!        CALL CPU_TIME(num2)
+
+!        CALL norm2abserr(vecall4, vecall1, n, num3)
+!        WRITE(*,*) num2 - num1, num3
+
+!        CALL CPU_TIME(num1)
+!        CALL solvegausselim2(matall1,n,vecall2,vecall4)
+!        CALL CPU_TIME(num2)
+
+!        CALL norm2abserr(vecall4, vecall1, n, num4)
+!        WRITE(*,*) num2 - num1, num4
+
+
+!        DEALLOCATE(matall1,vecall1,vecall2,vecall3,vecall4)
+!    END DO
+
+
 
 
 END PROGRAM
