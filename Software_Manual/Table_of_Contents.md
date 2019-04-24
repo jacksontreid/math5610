@@ -58,6 +58,7 @@
 - [solvejacobi](solvejacobi.md)
 - [solveLUfactor](solveLUfactor.md)
 - [solveQRfactor](solveQRfactor.md)
+- [solvesteepest](solvesteepest.md)
 
 
 

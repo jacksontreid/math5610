@@ -36,8 +36,9 @@ Repeat the previous task using the Gauss-Seidel algorithm.
 | 10,000 | 46.93 s  | 6.9295168415164453E-013 |  4300.22 s  | 9.0672917653730400E-013 |
 
 ### Task 3
-Implement the steepest descent method for solving linear systems of equations Ax=b. Write up an entry in your software manual.
-- 
+Implement the steepest descent method for solving linear systems of equations _A_ _x_=_b_. Write up an entry in your software manual.
+- Code: [solvesteepest.f90](solvesteepest.f90)
+- Software Manual [entry](Software_Manual/solvesteepest.md).
 
 ### Task 4
 Try out your steepest descent method on Hilbert matrices of size 4, 8, 16, 32. Explain your results.
