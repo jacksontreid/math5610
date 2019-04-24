@@ -4,7 +4,7 @@
 
 - [x] [Task 1](#task-1)
 - [x] [Task 2](#task-2)
-- [ ] [Task 3](#task-3)
+- [x] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
 - [ ] [Task 5](#task-5)
 - [ ] [Task 6](#task-6)
@@ -42,15 +42,32 @@ Implement the steepest descent method for solving linear systems of equations _A
 
 ### Task 4
 Try out your steepest descent method on Hilbert matrices of size 4, 8, 16, 32. Explain your results.
-- 
+- For the system _A_ _x_ = _b_ -- where _A_ is a Hilbert matrix and _b_ is generated from the known solution _x_ = [1.0] -- the solution is calculated with 500,000 iterations.
+
+|  n   | Steepest-Descent Error  |
+| :--: | :---------------------: |
+|  4   | 2.0986699318578702E-010 |
+|  8   | 1.4479002872956040E-003 |
+|  16  | 1.7942141697499905E-003 |
+|  32  | 2.4664697772506013E-003 |
+>The steepest descent method has a hard time converging with the Hilbert matrices. Even after 500,000 iterations, the method did not converge within the tolerance (10E-15), except for n = 4, and the resulting error is at an unacceptable level for n = 8, 16, and 32. 
 
 ### Task 5
 Implement the Conjugate Gradient method. Document the algorithm in an entry in your software manual.
-- 
+- Code: [solveconjgrad.f90](solveconjgrad.f90)
+- Software Manual [entry](Software_Manual/solveconjgrad.md).
 
 ### Task 6
 Try out the conjugate gradient method from the previous task on Hilbert matrices of order 4, 8, 16, and 32. Describe the results you obtained.
-- 
+- For the system _A_ _x_ = _b_ -- where _A_ is a Hilbert matrix and _b_ is generated from the known solution _x_ = [1.0] -- the solution is calculated within a tolerance of 10E-15.
+
+|  n   | Iterations | Conjugate-Gradient Error |
+| :--: | :--------: | :----------------------: |
+|  4   |     6      | 5.0771533139137843E-013  |
+|  8   |     13     | 3.1191834773973931E-005  |
+|  16  |     21     | 3.4884110716025324E-005  |
+|  32  |     30     | 3.3513510808611327E-005  |
+>The steepest descent method has a hard time converging with the Hilbert matrices. Even after 500,000 iterations, the method did not converge within the tolerance (10E-15), except for n = 4, and the resulting error is at an unacceptable level for n = 8, 16, and 32. 
 
 
 ### Task 7

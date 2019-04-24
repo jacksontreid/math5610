@@ -51,6 +51,7 @@
 - [QRdecomp](QRdecomp.md)
 - [QRdecomphouse](QRdecomphouse.md)
 - [QRdecompmod](QRdecompmod.md)
+- [solveconjgrad](solveconjgrad.md)
 - [solvediagsys](solvediagsys.md)
 - [solvegausselim](solvegausselim.md)
 - [solvegausselim2](solvegausselim2.md)

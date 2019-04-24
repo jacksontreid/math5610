@@ -661,8 +661,54 @@ WRITE(*,*) "   DIAGONAL"
 
     vec5 = (/ 0.0d0, 0.0d0, 0.0d0 /)
 
-    CALL solvesteepest(mat2,3,vec4,vec5,10.d-15,100,.TRUE.,vec6)
+    CALL solvesteepest(mat2,3,vec4,vec5,10.d-15,100,.FALSE.,vec6)
     WRITE(*,*) vec6
     WRITE(*,*)
+
+    WRITE(*,*) "   SOLVE CONJUGATE GRADIENT"
+    mat2 = RESHAPE((/7.0d0, 3.0d0, 1.0d0, &
+                   & 3.0d0, 10.0d0, 2.0d0, &
+                   & 1.0d0, 2.0d0, 15.0d0/),(/3,3/),ORDER=(/2,1/))
+    vec4 = (/ 28.0d0, 31.0d0, 22.0d0 /)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec4
+    WRITE(*,*)
+
+    vec5 = (/ 0.0d0, 0.0d0, 0.0d0 /)
+
+    CALL solveconjgrad(mat2,3,vec4,vec5,10.d-15,100,.FALSE.,vec6)
+    WRITE(*,*) vec6
+    WRITE(*,*)
+
+!    DO i = 2,5
+!        n = 2**i
+!        WRITE(*,*) 'n = ',n
+!        ALLOCATE(matall1(n,n),vecall1(n),vecall2(n),vecall3(n),vecall4(n))
+
+!        DO j = 1,n
+!            DO k = j,n
+!                matall1(j,k) = 1.0d0/DBLE(j+k-1)
+!                matall1(k,j) = matall1(j,k)
+!            END DO
+!        END DO
+
+!        vecall1 = 1.0d0
+!        vecall3 = 0.1d0
+
+!        CALL multmat(matall1,vecall1,n,n,1,vecall2)
+!        CALL solveconjgrad(matall1,n,vecall2,vecall3,10.d-15,100,.FALSE.,vecall4)
+
+!        CALL norm2abserr(vecall4, vecall1, n, num3)
+
+!        WRITE(*,*) num3
+!        WRITE(*,*)
+
+!        DEALLOCATE(matall1,vecall1,vecall2,vecall3,vecall4)
+!    END DO
+
+
 
 END PROGRAM
