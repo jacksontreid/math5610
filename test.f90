@@ -647,6 +647,22 @@ WRITE(*,*) "   DIAGONAL"
 !    END DO
 
 
+    WRITE(*,*) "   SOLVE STEEPEST DESCENT"
+    mat2 = RESHAPE((/7.0d0, 3.0d0, 1.0d0, &
+                   & 3.0d0, 10.0d0, 2.0d0, &
+                   & 1.0d0, 2.0d0, 15.0d0/),(/3,3/),ORDER=(/2,1/))
+    vec4 = (/ 28.0d0, 31.0d0, 22.0d0 /)
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+    WRITE(*,*) vec4
+    WRITE(*,*)
 
+    vec5 = (/ 0.0d0, 0.0d0, 0.0d0 /)
+
+    CALL solvesteepest(mat2,3,vec4,vec5,10.d-15,100,.TRUE.,vec6)
+    WRITE(*,*) vec6
+    WRITE(*,*)
 
 END PROGRAM
