@@ -5,11 +5,11 @@
 - [x] [Task 1](#task-1)
 - [x] [Task 2](#task-2)
 - [x] [Task 3](#task-3)
-- [ ] [Task 4](#task-4)
-- [ ] [Task 5](#task-5)
-- [ ] [Task 6](#task-6)
-- [ ] [Task 7](#task-7)
-- [ ] [Task 8](#task-8)
+- [x] [Task 4](#task-4)
+- [x] [Task 5](#task-5)
+- [x] [Task 6](#task-6)
+- [x] [Task 7](#task-7)
+- [x] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
@@ -50,6 +50,7 @@ Try out your steepest descent method on Hilbert matrices of size 4, 8, 16, 32. E
 |  8   | 1.4479002872956040E-003 |
 |  16  | 1.7942141697499905E-003 |
 |  32  | 2.4664697772506013E-003 |
+
 >The steepest descent method has a hard time converging with the Hilbert matrices. Even after 500,000 iterations, the method did not converge within the tolerance (10E-15), except for n = 4, and the resulting error is at an unacceptable level for n = 8, 16, and 32. 
 
 ### Task 5
@@ -67,24 +68,34 @@ Try out the conjugate gradient method from the previous task on Hilbert matrices
 |  8   |     13     | 3.1191834773973931E-005  |
 |  16  |     21     | 3.4884110716025324E-005  |
 |  32  |     30     | 3.3513510808611327E-005  |
->The steepest descent method has a hard time converging with the Hilbert matrices. Even after 500,000 iterations, the method did not converge within the tolerance (10E-15), except for n = 4, and the resulting error is at an unacceptable level for n = 8, 16, and 32. 
+
+>The conjugate gradient method did better than the steepest descent method with the Hilbert matrices. It converged within the tolerance in approximately _n_ iterations, though, the error for n = 8, 16, and 32 remains at an unacceptable level. 
 
 
 ### Task 7
 Do an internet search on the use of iterative methods for the solution of linear systems of equations. Provide a list of at least three methods that do not use preconditioning of the system.
-- > 
+- > Jacobi Iteration:
   >
-  > - 
-
+  > - https://en.wikipedia.org/wiki/Jacobi_method
+- > Gauss-Seidel Method:
+  >
+  > - https://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method
+- > Gradient Descent:
+  >
+  > - https://en.wikipedia.org/wiki/Gradient_descent
 
 ### Task 8
 Look for internet sites that include descriptions of preconditioning of systems of equations. Document at least 3 different preconditioning strategies.
-- > 
+- > A pre-conditioner is a matrix that is pre-multiplied (or post-multiplied) to a linear system to make it better-conditioned for the desired solution algorithm. Examples of pre-conditioners include: Jacobi, Incomplete Cholesky Factorization, Incomplete LU Factorization, Successive Over-Relaxation, and Multigrid Preconditioning.
   >
-  > - 
-
+  > - http://www.math.iit.edu/~fass/477577_Chapter_16.pdf
+  > - https://math-linux.com/mathematics/linear-systems/article/preconditioned-conjugate-gradient-method
+  > - https://en.wikipedia.org/wiki/Preconditioner#Preconditioning_for_linear_systems
+  > - https://en.wikipedia.org/wiki/Incomplete_Cholesky_factorization
+  > - https://en.wikipedia.org/wiki/Incomplete_LU_factorization
 
 ### Task 9
+
 Compare results on symmetric positive definite linear systems of equations using Jacobi versus the conjugate gradient methods. Discuss the results on systems with at least 500 equations and unknowns.
 - 
 
