@@ -95,11 +95,19 @@ Look for internet sites that include descriptions of preconditioning of systems 
   > - https://en.wikipedia.org/wiki/Incomplete_LU_factorization
 
 ### Task 9
-
 Compare results on symmetric positive definite linear systems of equations using Jacobi versus the conjugate gradient methods. Discuss the results on systems with at least 500 equations and unknowns.
-- 
+- For the system _A_ _x_ = _b_ -- where _A_ is a symmetric, diagonally-dominant matrix, and _b_ is generated from the known solution _x_ = [1.0] -- the solution is calculated within a tolerance of 10E-15.
+
+|   n    | Jacobi Iterations | Conjugate-Gradient Iterations |
+| :----: | :---------------: | :---------------------------: |
+|   10   |        65         |              10               |
+|  100   |        94         |              19               |
+| 1,000  |        100        |              19               |
+| 10,000 |        106        |              18               |
+
+>The conjugate gradient method did better than the Jacobi in terms of the number of iterations required to converge. The comparison between the two methods in terms of the error, with respect to the true solution, is difficult to generalize because of its dependence of how diagonally dominant _A_ is and the difference in how the convergence criteria is calculated for the two methods.
 
 ### Task 10
-Describe an algorithm for computing the solution of linear least squares systems using Jacobi iteration. Create an entry in your software manual for your algorihm and an example. You can use one of the examples in the current textbook.
+Describe an algorithm for computing the solution of linear least squares systems using Jacobi iteration. Create an entry in your software manual for your algorithm and an example. You can use one of the examples in the current textbook.
 
 - 
