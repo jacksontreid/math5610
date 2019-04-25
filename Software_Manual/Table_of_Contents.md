@@ -34,6 +34,7 @@
 - [addvec](addvec.md)
 - [crossvec](crossvec.md)
 - [dotvec](dotvec.md)
+- [eigpower](eigpower.md)
 - [multmat](multmat.md)
 - [outervec](outervec.md)
 - [scalemat](scalemat.md)

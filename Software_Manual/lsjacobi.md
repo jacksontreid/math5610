@@ -8,16 +8,20 @@
 
 **Description:** This routine will compute an approximate solution of a least squares problem, using the normal equations with a Jacobi iterative solver, as follows:
 - Create the normal equations
+
   <a href="https://www.codecogs.com/eqnedit.php?latex=\left(A^T&space;A&space;\right&space;)\mathbf{\vv{x}}&space;=&space;A^T&space;\mathbf{\vv{b}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left(A^T&space;A&space;\right&space;)\mathbf{\vv{x}}&space;=&space;A^T&space;\mathbf{\vv{b}}" title="\left(A^T A \right )\mathbf{\vv{x}} = A^T \mathbf{\vv{b}}" /></a>
 
 - Condition the system to be diagonally dominant (as required by Jacobi Iteration)
+
   <a href="https://www.codecogs.com/eqnedit.php?latex=\left(A^TA&space;&plus;&space;\alpha{I}&space;\right&space;)\mathbf{\vv{x}}&space;=&space;A^T\mathbf{\vv{b}}&space;&plus;&space;\alpha{I}\mathbf{\vv{x}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left(A^TA&space;&plus;&space;\alpha{I}&space;\right&space;)\mathbf{\vv{x}}&space;=&space;A^T\mathbf{\vv{b}}&space;&plus;&space;\alpha{I}\mathbf{\vv{x}}" title="\left(A^TA + \alpha{I} \right )\mathbf{\vv{x}} = A^T\mathbf{\vv{b}} + \alpha{I}\mathbf{\vv{x}}" /></a>
 
 - Split the diagonal from the LHS matrix 
+
   <a href="https://www.codecogs.com/eqnedit.php?latex=\left(D_{A^TA}&space;&plus;&space;\alpha{I}&space;\right&space;)\mathbf{\vv{x}}_{k&plus;1}&space;=&space;A^T\mathbf{\vv{b}}&space;&plus;&space;\alpha{I}\mathbf{\vv{x}}_k&space;-&space;\left(L&space;&plus;&space;U&space;\right&space;)_{A^TA}\mathbf{\vv{x}}_k" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left(D_{A^TA}&space;&plus;&space;\alpha{I}&space;\right&space;)\mathbf{\vv{x}}_{k&plus;1}&space;=&space;A^T\mathbf{\vv{b}}&space;&plus;&space;\alpha{I}\mathbf{\vv{x}}_k&space;-&space;\left(L&space;&plus;&space;U&space;\right&space;)_{A^TA}\mathbf{\vv{x}}_k" title="\left(D_{A^TA} + \alpha{I} \right )\mathbf{\vv{x}}_{k+1} = A^T\mathbf{\vv{b}} + \alpha{I}\mathbf{\vv{x}}_k - \left(L + U \right )_{A^TA}\mathbf{\vv{x}}_k" /></a>
 
 - Invert the diagonal matrix
-<a href="https://www.codecogs.com/eqnedit.php?latex=\mathbf{\vv{x}}_{k&plus;1}&space;=&space;\left[A^T\mathbf{\vv{b}}&space;&plus;&space;\alpha{I}\mathbf{\vv{x}}_k&space;-&space;\left(L&space;&plus;&space;U&space;\right&space;)_{A^TA}\mathbf{\vv{x}}_k\right]/\left(D_{A^TA}&space;&plus;&space;\alpha{I}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbf{\vv{x}}_{k&plus;1}&space;=&space;\left[A^T\mathbf{\vv{b}}&space;&plus;&space;\alpha{I}\mathbf{\vv{x}}_k&space;-&space;\left(L&space;&plus;&space;U&space;\right&space;)_{A^TA}\mathbf{\vv{x}}_k\right]/\left(D_{A^TA}&space;&plus;&space;\alpha{I}&space;\right&space;)" title="\mathbf{\vv{x}}_{k+1} = \left[A^T\mathbf{\vv{b}} + \alpha{I}\mathbf{\vv{x}}_k - \left(L + U \right )_{A^TA}\mathbf{\vv{x}}_k\right]/\left(D_{A^TA} + \alpha{I} \right )" /></a>
+
+  <a href="https://www.codecogs.com/eqnedit.php?latex=\mathbf{\vv{x}}_{k&plus;1}&space;=&space;\left[A^T\mathbf{\vv{b}}&space;&plus;&space;\alpha{I}\mathbf{\vv{x}}_k&space;-&space;\left(L&space;&plus;&space;U&space;\right&space;)_{A^TA}\mathbf{\vv{x}}_k\right]/\left(D_{A^TA}&space;&plus;&space;\alpha{I}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbf{\vv{x}}_{k&plus;1}&space;=&space;\left[A^T\mathbf{\vv{b}}&space;&plus;&space;\alpha{I}\mathbf{\vv{x}}_k&space;-&space;\left(L&space;&plus;&space;U&space;\right&space;)_{A^TA}\mathbf{\vv{x}}_k\right]/\left(D_{A^TA}&space;&plus;&space;\alpha{I}&space;\right&space;)" title="\mathbf{\vv{x}}_{k+1} = \left[A^T\mathbf{\vv{b}} + \alpha{I}\mathbf{\vv{x}}_k - \left(L + U \right )_{A^TA}\mathbf{\vv{x}}_k\right]/\left(D_{A^TA} + \alpha{I} \right )" /></a>
 
 **Inputs:** 
 
