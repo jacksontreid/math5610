@@ -2,7 +2,7 @@
 
 ## Homework #8
 
-- [ ] [Task 1](#task-1)
+- [x] [Task 1](#task-1)
 - [ ] [Task 2](#task-2)
 - [ ] [Task 3](#task-3)
 - [ ] [Task 4](#task-4)
@@ -15,7 +15,18 @@
 
 ### Task 1
 Implement a code that will approximate the largest eigenvalue of a matrix using the Power Iteration algorithm. Test the code in the Hilbert matrix. Include an entry in your software manual for the algorithm.
-- 
+- Code: [eigpower.f90](eigpower.f90)
+
+- Software Manual [entry](Software_Manual/eigpower.md).
+
+  |  n   | Hilbert Matrix Largest Eigenvalue |
+  | :--: | :-------------------------------: |
+  |  4   |        1.5002142800592426         |
+  |  6   |        1.6188998589243391         |
+  |  8   |        1.6959389969219498         |
+  |  10  |        1.7519196702651774         |
+
+  
 
 
 ### Task 2
