@@ -709,28 +709,28 @@ WRITE(*,*) "   DIAGONAL"
 !        DEALLOCATE(matall1,vecall1,vecall2,vecall3,vecall4)
 !    END DO
 
-    WRITE(*,*) "   JACOBI VS CONJUGATE GRADIENT"
+!    WRITE(*,*) "   JACOBI VS CONJUGATE GRADIENT"
 
-    DO i = 1,3
+    DO i = 1,4
         n = 10.d0**i
         ALLOCATE(matall1(n,n),vecall1(n),vecall2(n),vecall3(n),vecall4(n))
 
         vecall1 = 1.0d0
 
-        CALL randspdmat(n,matall1)
+        CALL randsymdommat(n,matall1)
 
         CALL multmat(matall1,vecall1,n,n,1,vecall2)
 
         WRITE(*,*) n
 
-        vecall3 = 0.1d0
+        vecall3 = 0.0d0
 
-        CALL solvejacobi(matall1,n,vecall2,vecall3,10.d-10,100,.TRUE.,vecall4)
+        CALL solvejacobi(matall1,n,vecall2,vecall3,10.d-15,1000,.FALSE.,vecall4)
 
         CALL norm2abserr(vecall4, vecall1, n, num1)
         WRITE(*,*) num1
 
-        CALL solveconjgrad(matall1,n,vecall2,vecall3,10.d-10,100,.TRUE.,vecall4)
+        CALL solveconjgrad(matall1,n,vecall2,vecall3,10.d-15,1000,.FALSE.,vecall4)
 
         CALL norm2abserr(vecall4, vecall1, n, num1)
         WRITE(*,*) num1
