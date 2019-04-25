@@ -10,8 +10,8 @@
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
-- [ ] [Task 9](#task-9)
-- [ ] [Task 10](#task-10)
+- [x] [Task 9](#task-9)
+- [x] [Task 10](#task-10)
 
 ### Task 1
 Compare the results for the Jacobi iteration and Gaussian elimination on matrices that are diagonally dominant. Tabulate the CPU time necessary to complete the iteration to a given number of digits of accuracy. Tabulate results for successfully larger matrices. Is there an intersection for the curves?
@@ -110,4 +110,6 @@ Compare results on symmetric positive definite linear systems of equations using
 ### Task 10
 Describe an algorithm for computing the solution of linear least squares systems using Jacobi iteration. Create an entry in your software manual for your algorithm and an example. You can use one of the examples in the current textbook.
 
-- 
+- Code: [lsjacobi.f90](lsjacobi.f90)
+- Software Manual [entry](Software_Manual/lsjacobi.md).
+
