@@ -1,23 +1,31 @@
-!Computes the largest eigenvalue of a matrix using the power method.
+!Computes the smallest (or other), real eigenvalue of a matrix using the inverse
+!Power Method.
 !@author: Jackson Reid
 
 
-SUBROUTINE eigpower(A,n,v0,tol,maxiter,l,v)
+SUBROUTINE eiginvpower(A,n,v0,alpha,tol,maxiter,l,v)
     IMPLICIT NONE
 
     INTEGER, INTENT(in) :: n, maxiter
-    REAL*8, INTENT(in) :: A(n,n), v0(n), tol
+    REAL*8, INTENT(in) :: A(n,n), v0(n), alpha, tol
     REAL*8, INTENT(out) :: l, v(n)
-    REAL*8 :: v1(n), vnorm, lold, error
+    REAL*8 :: A_LU(n,n), v1(n), vnorm, lold, error
     INTEGER :: i, iter
 
     error = 10.0d0*tol
     iter = 0
     lold = 0.0d0
 
-    CALL multmat(A,v0,n,n,1,v)
+    A_LU = A
+    DO i = 1,n
+        A_LU(i,i) = A_LU(i,i) - alpha
+    END DO
+    CALL LUdecomp(A_LU,n)
+    v1 = v0
 
     DO WHILE (error > tol .AND. iter < maxiter)
+
+        CALL solveLUfactor(A_LU,n,v1,v,.FALSE.)
 
         CALL norm2vec(v,n,vnorm)
 
