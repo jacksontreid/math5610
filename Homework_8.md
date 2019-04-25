@@ -16,7 +16,6 @@
 ### Task 1
 Implement a code that will approximate the largest eigenvalue of a matrix using the Power Iteration algorithm. Test the code in the Hilbert matrix. Include an entry in your software manual for the algorithm.
 - Code: [eigpower.f90](eigpower.f90)
-
 - Software Manual [entry](Software_Manual/eigpower.md).
 
   |  n   | Hilbert Matrix Largest Eigenvalue |
@@ -26,12 +25,17 @@ Implement a code that will approximate the largest eigenvalue of a matrix using 
   |  8   |        1.6959389969219498         |
   |  10  |        1.7519196702651774         |
 
-  
-
-
 ### Task 2
 Implement the Inverse Iteration method with shifting to find approximate eigenvalues of a matrix A. Include an entry in your software manual documenting the algorithm. Find an eigenvalue less than the largest for the Hilbert matrix.
-- 
+- Code: [eiginvpower.f90](eiginvpower.f90)
+- Software Manual [entry](Software_Manual/eiginvpower.md).
+
+  |  n   | Hilbert Matrix Smallest Eigenvalue |
+  | :--: | :--------------------------------: |
+  |  4   |      9.6702304022602893E-005       |
+  |  6   |      1.0827994843911298E-007       |
+  |  8   |      1.1115389699614863E-010       |
+  |  10  |      1.0932581386257379E-013       |
 
 ### Task 3
 Write a code that will compute an approximation of the condition in the 2-norm using your code to produce a largest and smallest eigenvalue of a matrix. Document your algorithm in your software manual. Try the code on a Hilbert matrix.
