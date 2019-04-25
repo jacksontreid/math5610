@@ -44,6 +44,7 @@
 - [choldecomp](choldecomp.md)
 - [forsub](forsub.md)
 - [rowechelon](rowechelon.md)
+- [lsjacobi](lsjacobi.md)
 - [lsnormal](lsnormal.md)
 - [lsQRgsmod](lsQRgsmod.md)
 - [lsQRhouse](lsQRhouse.md)
