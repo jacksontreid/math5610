@@ -28,6 +28,7 @@
 - [norm2vec](norm2vec.md)
 - [norminfmat](norminfmat.md)
 - [norminfvec](norminfvec.md)
+- [matcond](matcond.md)
 
 #### _Vector/Matrix Operations_
 - [addmat](addmat.md)
@@ -36,6 +37,7 @@
 - [dotvec](dotvec.md)
 - [eiginvpower](eiginvpower.md)
 - [eigpower](eigpower.md)
+- [eigsearch](eigsearch.md)
 - [multmat](multmat.md)
 - [outervec](outervec.md)
 - [scalemat](scalemat.md)
