@@ -7,7 +7,7 @@
 - [x] [Task 3](#task-3)
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
-- [ ] [Task 6](#task-6)
+- [x] [Task 6](#task-6)
 - [ ] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
@@ -62,7 +62,17 @@ Write a code that will compute approximations of the smallest and largest eigenv
 
 ### Task 6
 Implement the Raleigh Quotient algorithm for computing approximations for eigenvalues of a matrix. Test the code on a Hilbert matrix and document the code in a software entry manual.
-- 
+- Code: [eigrayleigh.f90](eigrayleigh.f90)
+
+- Software Manual [entry](Software_Manual/eigrayleigh.md).
+
+- > For a Hilbert matrix of _n_ = 4, with an initial guess of v0 = [1.0, 1.0, 1.0, 1.0], Rayleigh Quotient Iteration locates the eigenvalue 
+  >
+  > l = 1.5002142800592428
+  >
+  > with eigenvector 
+  >
+  > v = [-1.000000,      -0.570172,     -0.406779,      -0.318141 ]
 
 
 ### Task 7

@@ -37,6 +37,7 @@
 - [dotvec](dotvec.md)
 - [eiginvpower](eiginvpower.md)
 - [eigpower](eigpower.md)
+- [eigrayleigh](eigrayleigh.md)
 - [eigsearch](eigsearch.md)
 - [multmat](multmat.md)
 - [outervec](outervec.md)
