@@ -786,10 +786,24 @@ WRITE(*,*) "   DIAGONAL"
 
     vec4 = (/ 1.0d0, 1.0d0, 1.0d0 /)
 
-    CALL eiginvpower(mat2,3,vec4,1.1d0,10.d-15,100,num1,vec6)
+    CALL eiginvpower(mat2,3,vec4,0.0d0,10.d-15,100,num1,vec6)
     WRITE(*,*) num1
     WRITE(*,*) vec6
     WRITE(*,*)
+
+    WRITE(*,*) "   CONDITION NUMBER"
+    mat2 = RESHAPE((/2.0d0, 1.0d0, 0.0d0, &
+                   & 1.0d0, 2.0d0, 1.0d0, &
+                   & 0.0d0, 1.0d0, 2.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+
+    vec4 = (/ 1.0d0, 1.0d0, 1.0d0 /)
+
+    CALL matcond(mat2,3,vec4,10.d-15,100,num1,num2,num3)
+    WRITE(*,*) num1, num2, num3
 
 !    DO i = 4,10,2
 !        WRITE(*,*) i
@@ -804,12 +818,26 @@ WRITE(*,*) "   DIAGONAL"
 
 !        vecall1 = 1.0d0
 
-!        CALL eiginvpower(matall1,i,vecall1,0.0d0,10.d-15,100,num1,vecall2)
-!        WRITE(*,*) num1
+!        CALL matcond(matall1,i,vecall1,10.d-15,100,num1,num2,num3)
+!        WRITE(*,*) num1,num2,num3
 !        WRITE(*,*)
 
 !        DEALLOCATE(matall1,vecall1,vecall2)
 !    END DO
+
+    WRITE(*,*) "   Eigenvalue Search"
+    mat2 = RESHAPE((/2.0d0, 1.0d0, 0.0d0, &
+                   & 1.0d0, 2.0d0, 1.0d0, &
+                   & 0.0d0, 1.0d0, 2.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+
+    vec4 = (/ 1.0d0, 1.0d0, 1.0d0 /)
+
+    CALL eigsearch(mat2,3,vec4,10.d-15,100,4)
+    WRITE(*,*)
 
 
 
