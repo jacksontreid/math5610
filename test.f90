@@ -791,6 +791,22 @@ WRITE(*,*) "   DIAGONAL"
     WRITE(*,*) vec6
     WRITE(*,*)
 
+    WRITE(*,*) "   RAYLEIGH QUOTIENT ITERATION"
+    mat2 = RESHAPE((/2.0d0, 1.0d0, 0.0d0, &
+                   & 1.0d0, 2.0d0, 1.0d0, &
+                   & 0.0d0, 1.0d0, 2.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+
+    vec4 = (/ 1.0d0, 1.0d0, 1.0d0 /)
+
+    CALL eigrayleigh(mat2,3,vec4,10.d-15,100,num1,vec6)
+    WRITE(*,*) num1
+    WRITE(*,*) vec6
+    WRITE(*,*)
+
     WRITE(*,*) "   CONDITION NUMBER"
     mat2 = RESHAPE((/2.0d0, 1.0d0, 0.0d0, &
                    & 1.0d0, 2.0d0, 1.0d0, &
@@ -804,6 +820,7 @@ WRITE(*,*) "   DIAGONAL"
 
     CALL matcond(mat2,3,vec4,10.d-15,100,num1,num2,num3)
     WRITE(*,*) num1, num2, num3
+    WRITE(*,*)
 
 !    DO i = 4,10,2
 !        WRITE(*,*) i
@@ -836,9 +853,28 @@ WRITE(*,*) "   DIAGONAL"
 
     vec4 = (/ 1.0d0, 1.0d0, 1.0d0 /)
 
-    CALL eigsearch(mat2,3,vec4,10.d-15,100,4)
+    CALL eigsearch(mat2,3,vec4,10.d-15,100,3)
     WRITE(*,*)
 
+
+    i = 4
+    ALLOCATE(matall1(i,i),vecall1(i),vecall2(i))
+
+    DO j = 1,i
+        DO k = j,i
+            matall1(j,k) = 1.0d0/DBLE(j+k-1)
+            matall1(k,j) = matall1(j,k)
+        END DO
+    END DO
+
+    vecall1 = 1.0d0
+
+    CALL eigrayleigh(matall1,i,vecall1,10.d-15,100,num1,vecall2)
+    WRITE(*,*) num1
+    WRITE(*,*) vecall2
+    WRITE(*,*)
+
+    DEALLOCATE(matall1,vecall1,vecall2)
 
 
 END PROGRAM
