@@ -12,7 +12,7 @@
 
 ​        _A_ : REAL*8 -- an array of size (_n_,_n_) containing non-zero values of _A_
 
-​	_n_ : INTEGER -- the number describing the size of _A_ and _b_
+​	_n_ : INTEGER -- the number describing the size of _A_ 
 
 ​        _v0_ : REAL*8 -- an array of size (n) containing the initial guess of the eigenvector
 

@@ -8,7 +8,7 @@
 - [x] [Task 4](#task-4)
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
-- [ ] [Task 7](#task-7)
+- [x] [Task 7](#task-7)
 - [ ] [Task 8](#task-8)
 - [ ] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
@@ -77,7 +77,23 @@ Implement the Raleigh Quotient algorithm for computing approximations for eigenv
 
 ### Task 7
 Use the Rayleigh Quotient algorthm to compute an approximation for the condition of the matrix. Test your code on a Hilbert matrix of reasonable size. Discuss the results from the work.
-- 
+- Code: [matcond2.f90](matcond2.f90)
+
+- Software Manual [entry](Software_Manual/matcond2.md).
+
+- > For a Hilbert matrix of _n_ = 4, with 100 guesses, Rayleigh Quotient Iteration the highest eigenvalue found is
+  >
+  > "l1" = 1.5002142800592431
+  >
+  > and the lowest eigenvalue found is
+  >
+  > "ln" = 6.7382736057607206E-003
+  >
+  > Thus, the predicted condition number is
+  >
+  > cond(_A_) = 222.64074862983776
+  >
+  > This condition number is much lower than the one predicted using the power and inverse power methods. This is due to the fact that Rayleigh Quotient Iteration is unable to locate the true lowest eigenvalue from the random guess vectors.
 
 
 ### Task 8
