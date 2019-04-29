@@ -905,5 +905,21 @@ WRITE(*,*) "   DIAGONAL"
 !        DEALLOCATE(matall1,vecall1,vecall2,vecall3)
 !    END DO
 
+    WRITE(*,*) "   INVERSE POWER METHOD (W/ JACOBI)"
+    mat2 = RESHAPE((/2.0d0, 1.0d0, 0.0d0, &
+                   & 1.0d0, 2.0d0, 1.0d0, &
+                   & 0.0d0, 1.0d0, 2.0d0/),(/3,3/),ORDER=(/2,1/))
+    DO i = 1,3
+        WRITE(*,*) mat2(i,:)
+    END DO
+    WRITE(*,*)
+
+    vec4 = (/ 1.0d0, 1.0d0, 1.0d0 /)
+
+    CALL eiginvpower_jacobi(mat2,3,vec4,0.0d0,10.d-15,100,num1,vec6)
+    WRITE(*,*) num1
+    WRITE(*,*) vec6
+    WRITE(*,*)
+
 
 END PROGRAM

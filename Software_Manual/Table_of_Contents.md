@@ -37,6 +37,7 @@
 - [crossvec](crossvec.md)
 - [dotvec](dotvec.md)
 - [eiginvpower](eiginvpower.md)
+- [eiginvpower_jacobi](eiginvpower_jacobi.md)
 - [eigpower](eigpower.md)
 - [eigrayleigh](eigrayleigh.md)
 - [eigsearch](eigsearch.md)

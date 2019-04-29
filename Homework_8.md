@@ -11,7 +11,7 @@
 - [x] [Task 7](#task-7)
 - [x] [Task 8](#task-8)
 - [x] [Task 9](#task-9)
-- [ ] [Task 10](#task-10)
+- [x] [Task 10](#task-10)
 
 ### Task 1
 Implement a code that will approximate the largest eigenvalue of a matrix using the Power Iteration algorithm. Test the code in the Hilbert matrix. Include an entry in your software manual for the algorithm.
@@ -128,4 +128,5 @@ Compare the Inverse Iteration Algorithm and the Rayleigh Quotient Algorithm in t
 ### Task 10
 Implement a version of the Inverse Iteration Algorithm that uses Jacobi Iteration to compute solutions of the linear systems of equations. Test this algorithm using a random diagonally dominant matrix. Document the algorithm in your software manual.
 
-- 
+- Code: [eiginvpower_jacobi.f90](eiginvpower_jacobi.f90)
+- Software Manual [entry](Software_Manual/eiginvpower_jacobi.md).
