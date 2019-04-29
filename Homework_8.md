@@ -98,9 +98,14 @@ Use the Rayleigh Quotient algorthm to compute an approximation for the condition
 
 ### Task 8
 Look for internet sites that estimate the condition number of a matrix. Document the sites and as usual cite the web pages used in your explanation of the information found.
-- > 
+- > The condition number of a matrix is very important in the estimation of the error incurred in the solution of a linear system. If the condition number is small ("close" to 1), very little error is expected to incur. But, if the condition number is very large, the error incurred in the solution process is also likely to be large. 
   >
-  > - 
+  > A high computational cost is required to calculate the condition number, because it requires the inverse of the matrix whose condition number is sought. There are methods that try to decease this computational cost, by estimating the matrix inverse or using byproducts of the solution process.
+  >
+  > - http://www.cse.iitd.ernet.in/~dheerajb/CS210_lect07.pdf
+  > - https://www.jstor.org/stable/2156842?seq=5#metadata_info_tab_contents
+  > - https://www.mathworks.com/help/symbolic/cond.html
+  > - https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linalg.cond.html
 
 
 ### Task 9
