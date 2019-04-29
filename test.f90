@@ -879,4 +879,31 @@ WRITE(*,*) "   DIAGONAL"
 !    DEALLOCATE(matall1,vecall1,vecall2)
 
 
+!    WRITE(*,*) "   INVERSE ITERATION VS RAYLEIGH TIME TEST"
+
+!    DO i = 1,10
+!        n = 10*i
+!        ALLOCATE(matall1(n,n),vecall1(n),vecall2(n),vecall3(n))
+
+!        vecall1 = 1.0d0
+
+!        CALL randsymdommat(n,matall1)
+
+!        WRITE(*,*) n
+
+!        CALL CPU_TIME(num1)
+!        CALL eiginvpower(matall1,n,vecall1,0.0d0,10.d-15,10000,num3,vecall2)
+!        CALL CPU_TIME(num2)
+!        WRITE(*,*) num2 - num1, num3
+
+!        CALL CPU_TIME(num1)
+!        CALL eigrayleigh(matall1,n,vecall1,10.d-15,10000,num4,vecall3)
+!        CALL CPU_TIME(num2)
+!        WRITE(*,*) num2 - num1, num4
+!        WRITE(*,*)
+
+!        DEALLOCATE(matall1,vecall1,vecall2,vecall3)
+!    END DO
+
+
 END PROGRAM

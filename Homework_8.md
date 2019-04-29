@@ -9,8 +9,8 @@
 - [x] [Task 5](#task-5)
 - [x] [Task 6](#task-6)
 - [x] [Task 7](#task-7)
-- [ ] [Task 8](#task-8)
-- [ ] [Task 9](#task-9)
+- [x] [Task 8](#task-8)
+- [x] [Task 9](#task-9)
 - [ ] [Task 10](#task-10)
 
 ### Task 1
@@ -110,7 +110,20 @@ Look for internet sites that estimate the condition number of a matrix. Document
 
 ### Task 9
 Compare the Inverse Iteration Algorithm and the Rayleigh Quotient Algorithm in terms of the amount of time needed to compute an eigenvalue. Tabulate your results for the two methods.
-- 
+- Using randomly generated, symmetric, diagonally-dominant matrices of various sizes, and eigenvalue is found using an initial vector of [1.0] and shift of _alpha_ = 0. (The times presented in this table are dependent on the random matrix.)
+
+|  n   | Inverse Iteration (sec) | Rayleigh Quotient (sec) |
+| :--: | :---------------------: | :---------------------: |
+|  10  |   0.0000000000000000    |   0.0000000000000000    |
+|  20  |   0.0000000000000000    |   0.0000000000000000    |
+|  30  |   0.0000000000000000    | 4.0000000000000001E-003 |
+|  40  | 4.0000000000000001E-003 |   0.0000000000000000    |
+|  50  |   0.0000000000000000    | 4.0000000000000001E-003 |
+|  60  | 2.4000000000000000E-002 | 4.0000000000000036E-003 |
+|  70  | 2.0000000000000018E-002 | 4.0000000000000036E-003 |
+|  80  | 1.2000000000000011E-002 | 4.0000000000000036E-003 |
+|  90  | 1.2000000000000011E-002 | 8.0000000000000071E-003 |
+| 100  | 1.2000000000000011E-002 | 8.0000000000000071E-003 |
 
 ### Task 10
 Implement a version of the Inverse Iteration Algorithm that uses Jacobi Iteration to compute solutions of the linear systems of equations. Test this algorithm using a random diagonally dominant matrix. Document the algorithm in your software manual.
