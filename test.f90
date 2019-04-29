@@ -819,6 +819,11 @@ WRITE(*,*) "   DIAGONAL"
     vec4 = (/ 1.0d0, 1.0d0, 1.0d0 /)
 
     CALL matcond(mat2,3,vec4,10.d-15,100,num1,num2,num3)
+    WRITE(*,*) "matcond1"
+    WRITE(*,*) num1, num2, num3
+    WRITE(*,*)
+    CALL matcond2(mat2,3,10,10.d-15,100,num1,num2,num3)
+    WRITE(*,*) "matcond2"
     WRITE(*,*) num1, num2, num3
     WRITE(*,*)
 
@@ -835,7 +840,7 @@ WRITE(*,*) "   DIAGONAL"
 
 !        vecall1 = 1.0d0
 
-!        CALL matcond(matall1,i,vecall1,10.d-15,100,num1,num2,num3)
+!        CALL matcond2(matall1,i,100,10.d-15,100,num1,num2,num3)
 !        WRITE(*,*) num1,num2,num3
 !        WRITE(*,*)
 
@@ -857,24 +862,21 @@ WRITE(*,*) "   DIAGONAL"
     WRITE(*,*)
 
 
-    i = 4
-    ALLOCATE(matall1(i,i),vecall1(i),vecall2(i))
+!    i = 3
+!    ALLOCATE(matall1(i,i),vecall1(i),vecall2(i))
 
-    DO j = 1,i
-        DO k = j,i
-            matall1(j,k) = 1.0d0/DBLE(j+k-1)
-            matall1(k,j) = matall1(j,k)
-        END DO
-    END DO
+!    DO j = 1,i
+!        DO k = j,i
+!            matall1(j,k) = 1.0d0/DBLE(j+k-1)
+!            matall1(k,j) = matall1(j,k)
+!        END DO
+!    END DO
 
-    vecall1 = 1.0d0
+!    CALL matcond2(matall1,i,10.d-15,100,num1,num2,num3)
+!    WRITE(*,*) num1, num2, num3
+!    WRITE(*,*)
 
-    CALL eigrayleigh(matall1,i,vecall1,10.d-15,100,num1,vecall2)
-    WRITE(*,*) num1
-    WRITE(*,*) vecall2
-    WRITE(*,*)
-
-    DEALLOCATE(matall1,vecall1,vecall2)
+!    DEALLOCATE(matall1,vecall1,vecall2)
 
 
 END PROGRAM

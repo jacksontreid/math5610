@@ -29,6 +29,7 @@
 - [norminfmat](norminfmat.md)
 - [norminfvec](norminfvec.md)
 - [matcond](matcond.md)
+- [matcond2](matcond2.md)
 
 #### _Vector/Matrix Operations_
 - [addmat](addmat.md)
